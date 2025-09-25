@@ -9,10 +9,10 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Shield Guard
-email: your-email@example.com
+title: Infrastructure Intelligence
+email: dan.c@axonshield.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Security-focused content and insights from the Shield Guard team.
+  Strategic insights on evaluating vendor operational intelligence and preventing IT corporate amnesia in higher education. Led by Dan Cvrcek, exploring how systematic infrastructure management protects student success and institutional mission.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://axon-shield.github.io" # the base hostname & protocol for your site
 twitter_username: 
@@ -22,7 +22,7 @@ github_username: Axon-Shield
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:title/
+permalink: /:slug/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -49,7 +49,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Shield Guard Team"
+  name   : "Dan Cvrcek"
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "Security insights and content from the Shield Guard team."
   links:
