@@ -14,9 +14,7 @@ email: dan.c@axonshield.com
 description: >- # this means to ignore newlines until "baseurl:"
   Strategic insights on evaluating vendor operational intelligence and preventing IT corporate amnesia in higher education. Led by Dan Cvrcek, exploring how systematic infrastructure management protects student success and institutional mission.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://axon-shield.github.io" # the base hostname & protocol for your site
-twitter_username: 
-github_username: Axon-Shield
+url: "https://blog.axonshield.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -52,7 +50,7 @@ plugins:
 author:
   name   : "Dan Cvrcek"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Security insights and content from the Shield Guard team."
+  bio    : "Dan Cvrcek is CEO of Axon Shield, with a PhD in Computer Science and experience building certificate management systems for Barclays, Deutsche Bank, and TSB Bank. He helps startups develop the operational intelligence and systematic infrastructure understanding that procurement committees evaluate when selecting technology partners, transforming certificate management from operational overhead into competitive advantage for winning university and enterprise contracts."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
