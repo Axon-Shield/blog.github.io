@@ -21,7 +21,6 @@ github_username: Axon-Shield
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
-skin: "dark"  # Options: air, contrast, dark, dirt, mint, sunrise, aqua, neon, plum
 # Outputting
 permalink: /:slug/
 paginate: 5 # amount of posts to show

@@ -3,12 +3,13 @@
 ---
 
 // Custom color variables (override before importing theme)
-$primary-color: #4a90e2;          // Blue for links/accents
-$background-color: #100870;       // Dark blue background
-$text-color: #ffffff;             // White text on dark background
-$muted-text-color: #cccccc;       // Light gray for meta text
-$border-color: #2a4d8a;          // Lighter blue for borders
-$footer-background-color: #0a0560; // Even darker blue for footer
+// Uncomment and customize these variables as needed:
+// $primary-color: #52adc8;          // Custom accent color
+// $background-color: #ffffff;       // White background  
+// $text-color: #333333;             // Dark text
+// $muted-text-color: #666666;       // Gray for meta text
+// $border-color: #f2f3f3;          // Light border color
+// $footer-background-color: #f8f9fa; // Light footer background
 
 @import "minimal-mistakes/skins/{{ site.skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
