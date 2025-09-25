@@ -21,6 +21,7 @@ github_username: Axon-Shield
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+skin: "dark"  # Options: air, contrast, dark, dirt, mint, sunrise, aqua, neon, plum
 # Outputting
 permalink: /:slug/
 paginate: 5 # amount of posts to show
@@ -56,16 +57,7 @@ author:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://axon-shield.github.io"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/Axon-Shield"
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/Axon-Shield"
+      url: "https://ready.axonshield.com"
 
 defaults:
   # _posts
