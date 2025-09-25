@@ -1,0 +1,86 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Shield Guard
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Security-focused content and insights from the Shield Guard team.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://axon-shield.github.io" # the base hostname & protocol for your site
+twitter_username: 
+github_username: Axon-Shield
+
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name   : "Shield Guard Team"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "Security insights and content from the Shield Guard team."
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://axon-shield.github.io"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Axon-Shield"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Axon-Shield"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
