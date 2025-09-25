@@ -48,6 +48,11 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
+# Feed configuration
+feed:
+  posts_limit: 20
+  excerpt_only: false
+
 author:
   name   : "Dan Cvrcek"
   avatar : "/assets/images/bio-photo.jpg"
