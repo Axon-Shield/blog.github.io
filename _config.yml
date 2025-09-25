@@ -50,7 +50,7 @@ plugins:
 author:
   name   : "Dan Cvrcek"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Dan Cvrcek is CEO of Axon Shield, with a PhD in Computer Science and experience building certificate management systems for Barclays, Deutsche Bank, and TSB Bank. He helps startups develop the operational intelligence and systematic infrastructure understanding that procurement committees evaluate when selecting technology partners, transforming certificate management from operational overhead into competitive advantage for winning university and enterprise contracts."
+  bio    : "Dan Cvrcek is CEO of Axon Shield, with a professorship in Computer Security and experience building certificate management systems for Barclays, Deutsche Bank, TSB Bank. He helps startups develop the operational intelligence and systematic infrastructure understanding that procurement committees evaluate when selecting technology partners, transforming certificate management from operational overhead into competitive advantage for winning university and enterprise contracts."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"

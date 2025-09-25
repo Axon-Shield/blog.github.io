@@ -3,17 +3,10 @@ layout: home
 author_profile: true
 ---
 
-Welcome to your new Jekyll website using the Minimal Mistakes theme! This is your home page where you can introduce yourself and your content.
+Service providers lose million-dollar contracts not because of inferior technology, but because they can't prove operational intelligence to procurement committees. When universities, or other clients, ask for infrastructure documentation, systematic procedures, or evidence of operational maturity, most vendors scramble—and lose deals to competitors who demonstrate systematic understanding.
 
-## Latest Posts
+**Infrastructure Intelligence** provides strategic insights for proving vendor operational competence and winning higher education contracts. Led by Axon Shield CEO Dan Cvrcek, we explore how systematic infrastructure intelligence differentiates your organization from competitors who suffer from operational amnesia.
 
-Your recent blog posts will appear below this section automatically.
+For technology vendors, MSPs, and service providers competing for university contracts—discover the frameworks that transform certificate management into competitive advantage and operational proof that procurement committees can't ignore.
 
-## About This Site
-
-This website is built with:
-- **Jekyll** - A static site generator
-- **Minimal Mistakes** - A flexible two-column Jekyll theme
-- **GitHub Pages** - Free hosting for your static website
-
-Feel free to customize this page by editing the `index.md` file in your repository root.
+*Where operational intelligence wins contracts.*
