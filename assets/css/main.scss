@@ -11,5 +11,12 @@
 // $border-color: #f2f3f3;          // Light border color
 // $footer-background-color: #f8f9fa; // Light footer background
 
+// Site logo styling
+.site-logo img {
+  max-height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
 @import "minimal-mistakes/skins/{{ site.skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials

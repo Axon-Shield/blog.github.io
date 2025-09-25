@@ -10,6 +10,7 @@
 
 # Site settings
 title: Infrastructure Intelligence
+logo: "/assets/images/logo.png"
 email: dan.c@axonshield.com
 description: >- # this means to ignore newlines until "baseurl:"
   Strategic insights on evaluating vendor operational intelligence and preventing IT corporate amnesia in higher education. Led by Dan Cvrcek, exploring how systematic infrastructure management protects student success and institutional mission.
