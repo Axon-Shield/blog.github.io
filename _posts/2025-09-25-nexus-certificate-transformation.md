@@ -10,13 +10,7 @@ tags:
   - cloud-migration
   - fintech
   - automation
-header:
-  image: /assets/images/posts/nexus-certificate-management/certificate-transformation-journey.jpg
-  caption: "From manual certificate bottlenecks to automated cloud-based infrastructure"
 ---
-
-![Certificate Management Transformation](/assets/images/posts/nexus-certificate-management/certificate-transformation-journey.jpg)
-*The journey from manual, bottlenecked certificate processes to streamlined, automated cloud infrastructure*
 
 Nexus, a pseudonym for a large financial company in the UK, had a serious problem that most customers never saw but every employee felt. 
 
