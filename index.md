@@ -5,9 +5,7 @@ author_profile: true
 
 
 
-It took me 20 years to realise tha what I've been delivering to clients could have had a massive impact if presented for what it was - Infrastructure Intelligence.
-
-Service providers lose million-dollar contracts not because of inferior technology, but because they can't prove operational intelligence to procurement committees. When universities, or other clients, ask for infrastructure documentation, systematic procedures, or evidence of operational maturity, most vendors scramble—and lose deals to competitors who demonstrate systematic understanding.
+It took me 20 years to realise that what I've been delivering to clients could have had a massive impact if presented for what it was - Infrastructure Intelligence.
 
 **Infrastructure Intelligence** provides strategic and practical insights for proving vendor operational competence and winning contracts. Led by Axon Shield CEO Dan Cvrcek, we explore how systematic infrastructure intelligence differentiates your organization from competitors who suffer from operational amnesia. 
 
