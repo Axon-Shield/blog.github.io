@@ -13,7 +13,11 @@ title: Infrastructure Intelligence
 logo: "/assets/images/logo.png"
 email: dan.c@axonshield.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Strategic insights on evaluating vendor operational intelligence and preventing IT corporate amnesia in higher education. Led by Dan Cvrcek, exploring how systematic infrastructure management protects student success and institutional mission.
+  Strategic insights in operational intelligence and preventing IT >-
+  corporate amnesia in service and software enterprises (healthcare, education, >-
+  universities,fintech). Led by Dan Cvrcek, >-
+  exploring how systematic infrastructure management protects student success >-
+  and institutional mission.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.axonshield.com" # the base hostname & protocol for your site
 
@@ -56,7 +60,10 @@ feed:
 author:
   name   : "Dan Cvrcek"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Dan Cvrcek is CEO of Axon Shield, with a professorship in Computer Security and experience building certificate management systems for Barclays, Deutsche Bank, TSB Bank. He helps startups develop the operational intelligence and systematic infrastructure understanding that procurement committees evaluate when selecting technology partners, transforming certificate management from operational overhead into competitive advantage for winning university and enterprise contracts."
+  bio    : "Dan Cvrcek delivered secret and certificate services for Comcast. He focuses on operational intelligence that wins>-
+   enterprise contracts. With a professorship from Czech Republic and Cambridge University post-doctoral research, Dan built >-
+   PKI, DNS and encryption systems for Sky, TSB Bank, Deutsche Bank, or Barclays, combining startup agility with enterprise-proven >-
+   infrastructure intelligence methodologies that procurement committees evaluate when selecting technology partners."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
