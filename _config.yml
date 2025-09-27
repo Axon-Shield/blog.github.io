@@ -12,11 +12,11 @@
 title: Infrastructure Intelligence
 logo: "/assets/images/logo.png"
 email: dan.c@axonshield.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Strategic insights in operational intelligence and preventing IT >-
-  corporate amnesia in service and software enterprises (healthcare, education, >-
-  universities,fintech). Led by Dan Cvrcek, >-
-  exploring how systematic infrastructure management protects student success >-
+description: >
+  Strategic insights in operational intelligence and preventing IT
+  corporate amnesia in service and software enterprises (healthcare, education,
+  universities,fintech). Led by Dan Cvrcek,
+  exploring how systematic infrastructure management protects student success
   and institutional mission.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.axonshield.com" # the base hostname & protocol for your site
@@ -60,9 +60,9 @@ feed:
 author:
   name   : "Dan Cvrcek"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Dan Cvrcek delivered secret and certificate services for Comcast. He focuses on operational intelligence that wins>-
-   enterprise contracts. With a professorship from Czech Republic and Cambridge University post-doctoral research, Dan built >-
-   PKI, DNS and encryption systems for Sky, TSB Bank, Deutsche Bank, or Barclays. Combining startup agility with enterprise experience, >-
+  bio    : "Dan Cvrcek delivered secret and certificate services for Comcast. He focuses on operational intelligence that wins
+   enterprise contracts. With a professorship from Czech Republic and Cambridge University post-doctoral research, Dan built
+   PKI, DNS and encryption systems for Sky, TSB Bank, Deutsche Bank, or Barclays. Combining startup agility with enterprise experience, 
    he delivers infrastructure intelligence that makes real difference."
   links:
     - label: "Website"
