@@ -5,13 +5,13 @@ categories:
   - security
 tags:
   - Jekyll
-  - shield-guard
+  - blog
   - welcome
 ---
 
 Welcome to the Shield Guard security blog! This site is built with Jekyll and the Minimal Mistakes theme, optimized for sharing security insights and content.
 
-This post will be available at: `https://axon-shield.github.io/welcome-to-shield-guard/`
+This post will be available at: `https://blog.axonshield.com/welcome-to-jekyll/`
 
 To add new security-focused posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.md` and includes the necessary front matter.
 

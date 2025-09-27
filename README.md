@@ -1,4 +1,4 @@
-# Shield Guard
+# Blog Axon Shield
 
 A security-focused blog built with Jekyll and the Minimal Mistakes theme, deployed on GitHub Pages.
 
@@ -16,9 +16,9 @@ To run this site locally:
 ### Step 1: Clone the Repository
 
 ```bash
-# Clone the Shield Guard repository
-git clone https://github.com/Axon-Shield/shield-guard.github.io.git
-cd shield-guard.github.io
+# Clone the blog repository
+git clone https://github.com/Axon-Shield/blog.github.io.git
+cd blog.github.io
 ```
 
 ### Step 2: Add Your Content and Push
@@ -39,7 +39,7 @@ git push origin main
 The site is already configured for GitHub Pages and will be automatically available at:
 `https://axon-shield.github.io`
 
-**Note:** Since this uses the `shield-guard.github.io` repository name, GitHub Pages will automatically serve it as an organization site.
+**Note:** Since this uses the `blog.github.io` repository name, GitHub Pages will automatically serve it as an organization site.
 
 ## Adding Content
 
