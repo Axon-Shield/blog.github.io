@@ -12,9 +12,8 @@ tags:
 - workforce-development
 - security-support
 ---
-![Bridging Cyber Talent Gap](/assets/images/posts/talent-gap/bridging-cyber-talent-gap.jpg)
-*Bridging Cyber Talent Gap*
 
+![Bridging Cyber Talent Gap](/assets/images/posts/talent-gap/bridging-cyber-talent-gap.jpg)
 The cybersecurity talent shortage has reached crisis levels
   - with millions of unfilled positions worldwide. Organizations struggle to find qualified security professionals while existing teams face burnout from overwhelming workloads. Axon Shield's approach to bridging this gap goes beyond traditional hiring—we extend and amplify existing teams rather than replace them.
 
