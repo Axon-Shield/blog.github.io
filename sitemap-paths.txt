@@ -1,0 +1,31 @@
+# Original AxonShield sitemap paths (paths > 12 characters)
+# Extracted from the sitemap XML provided by user
+
+cyber-defense-strategy-aligning-security-with-business-objectives
+building-cyber-service
+how-we-designed-automated-certificate-lifecycle-management-20-years-of-iteration
+data-driven-strategy-dns-security-analysis
+waf-as-code-the-future-of-web-security-automation
+from-walled-garden-to-axon-fusion-zone
+deep-dive-into-dns-the-internets-super-smart-address-book
+the-business-case-for-modern-certificate-lifecycle-management
+akamai-web-application-firewall-how-it-works
+reclaim-control-over-your-cyber-defense-empowerment-over-fear
+dns-resiliency-and-first-step-to-transform-your-cyber-defense
+the-convergence-of-cyber-security-origins-of-axon-shield-from-technical-experts-to-efficient-delivery-of-cyber-security
+bridging-the-cyber-talent-gap-with-axon-shield-support
+migrating-from-hashicorp-vault
+scale-up-and-time-your-dns-management-with-whisper-watch
+axon-shield-proxy-live-testing-for-safer-devops
+from-hoststxt-to-modern-internet-infrastructure
+how-to-get-started-with-akamais-web-application-firewall
+the-science-of-digital-fingerprinting-for-waf-integration
+waf-for-microservices-and-serverless-mastering-accuracy-in-modern-architectures
+take-control-of-your-network-why-dns-is-key-to-understanding-your-internet
+dns-at-the-edge-performance-security-and-strategic-advantage
+beyond-the-dashboard-why-your-soc-needs-a-human-centered-command-center
+email-security-explained-how-your-digital-mail-stays-safe
+we-forget-that-cyber-defense-is-hard-apologies
+prevent-v-detect-it-is-all-about-effort-i-mean-ai
+cost-benefit-analysis-and-tco-of-waf-deployment-models
+akamai-and-security-operations
