@@ -1,25 +1,35 @@
 ---
-layout: post
 title: "How to Get Started with Akamai's Web Application Firewall"
-date: 2025-05-18
-categories: [cybersecurity, akamai, tutorial]
-tags: [akamai, waf, setup, configuration, security]
-image: /assets/images/posts/akamai-setup/akamai-waf-getting-started.jpg
-author: AxonShield
-original_url: https://axonshield.com/how-to-get-started-with-akamais-web-application-firewall
+date: 2025-05-18T05:00:00-04:00
+categories:
+- cybersecurity
+- akamai
+- tutorial
+tags:
+- akamai
+- waf
+- setup
+- configuration
+- security
 ---
+![Akamai Waf Getting Started](/assets/images/posts/akamai-setup/akamai-waf-getting-started.jpg)
+*Akamai Waf Getting Started*
 
 The very first days can be handled quite well by simply careful setting and regular checking. How do you put your personal touch in it? What rules would you set up just to soften your operation?
 
-The most critical device you need for network safeguard nowadays is a Web Application Firewall (WAF), a sure way against security threats. We at Akamai and Cloudflare work closely with direct customers and therefore, we have practical experience with both.
+The most critical device you need for network safeguard nowadays is a Web Application Firewall (WAF)
+  - a sure way against security threats. We at Akamai and Cloudflare work closely with direct customers and therefore
+  - we have practical experience with both.
 
 ## Understanding Akamai WAF
 
-Web Application Firewall (WAF) is one of the ways that Akamai protects the network. It can be set to function in a "per hostname" mode and is primarily designed for ports 80 and 443. This differs from IP range-based DDoS protections that rely on port 80, 443 and the whole subnet of an ISP's network.
+Web Application Firewall (WAF) is one of the ways that Akamai protects the network. It can be set to function in a "per hostname" mode and is primarily designed for ports 80 and 443. This differs from IP range-based DDoS protections that rely on port 80
+  - 443 and the whole subnet of an ISP's network.
 
 ## Getting Started: Three Key Aspects
 
-When adding a new website to Akamai, focus on the following three critical aspects:
+When adding a new website to Akamai
+  - focus on the following three critical aspects:
 
 ### 1. HTTPS Certificate
 The basis of WAF protection is the secure implementation of the proper certificate. This forms the foundation of your security architecture.
@@ -28,7 +38,8 @@ The basis of WAF protection is the secure implementation of the proper certifica
 
 **Testing Phase:**
 - Point your test laptop or VM to Akamai's staging network by editing the hosts file (or equivalent)
-- Test your website and APIs thoroughly, or let your customers generate enough traffic
+- Test your website and APIs thoroughly
+  - or let your customers generate enough traffic
 - Relax—issues are rare unless you have complex mTLS setups
 
 **Production Deployment:**
@@ -41,13 +52,17 @@ The basis of WAF protection is the secure implementation of the proper certifica
 **Initial Monitoring (2-4 weeks):**
 - Visit Akamai's Security Centre to review alerts
 - Handle any false positives by adding exceptions to your WAF configuration
-- Fine-tune rate limits for DDoS protection, controlling requests from single IP addresses
+- Fine-tune rate limits for DDoS protection
+  - controlling requests from single IP addresses
 
 ## The Finish Line
 
 ### Security Activation
 - Switch your security configuration from "Alert" to "Block"
-- From this point, Akamai's WAF will actively block XSS, SQLi, and other web attacks
+- From this point
+  - Akamai's WAF will actively block XSS
+  - SQLi
+  - and other web attacks
 - Akamai automatically updates WAF rules for emerging threats
 
 ### Ongoing Maintenance
@@ -57,7 +72,8 @@ The basis of WAF protection is the secure implementation of the proper certifica
 
 ## Real-World Success
 
-We have managed to deploy Akamai for all internet services of a middle-tier UK bank in less than 12 months, which included:
+We have managed to deploy Akamai for all internet services of a middle-tier UK bank in less than 12 months
+  - which included:
 - Establishment of an operating model
 - Development of initial operating procedures
 - Complete security policy implementation

@@ -1,15 +1,24 @@
 ---
-layout: post
-title: "Prevent v Detect: It is All About Effort, I Mean AI"
-date: 2025-08-20
-categories: [cybersecurity, ai, prevention, detection]
-tags: [prevention-vs-detection, artificial-intelligence, security-strategy, automation]
-image: /assets/images/posts/prevent-detect/prevent-detect-ai.jpg
-author: AxonShield
-original_url: https://axonshield.com/prevent-v-detect-it-is-all-about-effort-i-mean-ai
+title: "Prevent v Detect: It is All About Effort
+- I Mean AI"
+date: 2025-08-20T05:00:00-04:00
+categories:
+- cybersecurity
+- ai
+- prevention
+- detection
+tags:
+- prevention-vs-detection
+- artificial-intelligence
+- security-strategy
+- automation
 ---
+![Prevent Detect Ai](/assets/images/posts/prevent-detect/prevent-detect-ai.jpg)
+*Prevent Detect Ai*
 
-The classic cybersecurity debate between prevention and detection has taken on new dimensions in the age of artificial intelligence. While we joke that "effort" has been replaced by "AI" as the solution to everything, the reality is more nuanced. AI is fundamentally changing both prevention and detection capabilities, but it's the allocation of intelligent effort that determines success.
+The classic cybersecurity debate between prevention and detection has taken on new dimensions in the age of artificial intelligence. While we joke that "effort" has been replaced by "AI" as the solution to everything
+  - the reality is more nuanced. AI is fundamentally changing both prevention and detection capabilities
+  - but it's the allocation of intelligent effort that determines success.
 
 ## The Classic Prevention vs. Detection Debate
 
@@ -32,9 +41,11 @@ The classic cybersecurity debate between prevention and detection has taken on n
 ### The Traditional Middle Ground
 Most organizations adopted a layered approach:
 - **Defense in depth**: Multiple prevention layers with detection backup
-- **80/20 rule**: Prevent what you can, detect the rest
+- **80/20 rule**: Prevent what you can
+  - detect the rest
 - **Risk-based approach**: Heavy prevention for high-value assets
-- **Practical balance**: Prevention where cost-effective, detection elsewhere
+- **Practical balance**: Prevention where cost-effective
+  - detection elsewhere
 - **Continuous improvement**: Learn from detections to improve prevention
 
 ## Enter Artificial Intelligence
@@ -93,7 +104,8 @@ AI handles routine detection tasks:
 ## The Effort Equation
 
 ### Where Human Effort Goes
-Despite AI advancement, human effort remains crucial:
+Despite AI advancement
+  - human effort remains crucial:
 
 #### Strategic Planning
 - **AI strategy development**: Deciding how to use AI effectively
@@ -240,6 +252,10 @@ We help organizations implement AI-enhanced security through:
 - **Process optimization**: Integrating AI into existing security operations
 - **Continuous improvement**: Ongoing optimization of AI security systems
 
-The prevention vs. detection debate isn't resolved by AI—it's evolved. AI enhances both capabilities while requiring new forms of human effort in strategy, oversight, and governance. Success comes from intelligently combining AI capabilities with human expertise to create adaptive, effective security operations.
+The prevention vs. detection debate isn't resolved by AI—it's evolved. AI enhances both capabilities while requiring new forms of human effort in strategy
+  - oversight
+  - and governance. Success comes from intelligently combining AI capabilities with human expertise to create adaptive
+  - effective security operations.
 
-*Original source: [Prevent v Detect: It is All About Effort, I Mean AI](https://axonshield.com/prevent-v-detect-it-is-all-about-effort-i-mean-ai)*
+*Original source: [Prevent v Detect: It is All About Effort
+  - I Mean AI](https://axonshield.com/prevent-v-detect-it-is-all-about-effort-i-mean-ai)*

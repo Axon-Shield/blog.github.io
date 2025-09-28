@@ -1,19 +1,28 @@
 ---
-layout: post
 title: "Deep Dive into DNS: The Internet's Super Smart Address Book"
-date: 2024-04-10
-categories: [dns, infrastructure, networking]
-tags: [dns, networking, internet-infrastructure, domain-resolution]
-image: /assets/images/posts/dns-deep-dive/dns-address-book.jpg
-author: AxonShield
-original_url: https://axonshield.com/deep-dive-into-dns-the-internets-super-smart-address-book
+date: 2024-04-10T05:00:00-04:00
+categories:
+- dns
+- infrastructure
+- networking
+tags:
+- dns
+- networking
+- internet-infrastructure
+- domain-resolution
 ---
+![Dns Address Book](/assets/images/posts/dns-deep-dive/dns-address-book.jpg)
+*Dns Address Book*
 
-DNS (Domain Name System) is often called the phonebook of the internet, but it's far more sophisticated than any traditional address book. It's a distributed, hierarchical, and incredibly resilient system that makes the modern internet possible.
+DNS (Domain Name System) is often called the phonebook of the internet
+  - but it's far more sophisticated than any traditional address book. It's a distributed
+  - hierarchical
+  - and incredibly resilient system that makes the modern internet possible.
 
 ## What Makes DNS "Super Smart"?
 
-Unlike a static address book, DNS is:
+Unlike a static address book
+  - DNS is:
 
 - **Dynamic**: Addresses can change instantly across the globe
 - **Distributed**: No single point of failure or control
@@ -25,26 +34,46 @@ Unlike a static address book, DNS is:
 
 ### Root Level (.)
 - **13 logical root servers** worldwide (with hundreds of physical instances)
-- **Authoritative for top-level domains** (.com, .org, .net, etc.)
+- **Authoritative for top-level domains** (.com
+  - .org
+  - .net
+  - etc.)
 - **Operated by different organizations** for redundancy
 - **The starting point** for all DNS resolution
 
 ### Top-Level Domains (TLDs)
-- **Generic TLDs**: .com, .org, .net, .info
-- **Country Code TLDs**: .uk, .de, .jp, .au
-- **New gTLDs**: .blog, .shop, .tech, .cloud
-- **Sponsored TLDs**: .edu, .gov, .mil
+- **Generic TLDs**: .com
+  - .org
+  - .net
+  - .info
+- **Country Code TLDs**: .uk
+  - .de
+  - .jp
+  - .au
+- **New gTLDs**: .blog
+  - .shop
+  - .tech
+  - .cloud
+- **Sponsored TLDs**: .edu
+  - .gov
+  - .mil
 
 ### Second-Level Domains
-- **Your domain name**: axonshield.com, google.com
-- **Registered through registrars**: GoDaddy, Namecheap, etc.
+- **Your domain name**: axonshield.com
+  - google.com
+- **Registered through registrars**: GoDaddy
+  - Namecheap
+  - etc.
 - **Controlled by domain owners**: You decide the authoritative nameservers
 - **The level most businesses operate at**
 
 ### Subdomains
-- **Infinite subdivision possible**: blog.axonshield.com, mail.google.com
-- **Organizational flexibility**: Separate services, geographic regions
-- **Technical benefits**: Load balancing, service separation
+- **Infinite subdivision possible**: blog.axonshield.com
+  - mail.google.com
+- **Organizational flexibility**: Separate services
+  - geographic regions
+- **Technical benefits**: Load balancing
+  - service separation
 - **Administrative delegation**: Different teams can manage different subdomains
 
 ## How DNS Resolution Really Works
@@ -56,9 +85,12 @@ Operating System Cache → Browser Cache → Local DNS Files
 ```
 
 ### Step 2: Recursive Resolver Query
-If not cached locally, query goes to your ISP's recursive resolver:
-- **Google Public DNS**: 8.8.8.8, 8.8.4.4
-- **Cloudflare DNS**: 1.1.1.1, 1.0.0.1
+If not cached locally
+  - query goes to your ISP's recursive resolver:
+- **Google Public DNS**: 8.8.8.8
+  - 8.8.4.4
+- **Cloudflare DNS**: 1.1.1.1
+  - 1.0.0.1
 - **ISP DNS servers**: Provided automatically via DHCP
 
 ### Step 3: Root Server Query
@@ -76,7 +108,10 @@ Query TLD servers: "Who handles axonshield.com?"
 ### Step 5: Authoritative Server Query
 Query authoritative nameservers: "What's the IP for www.axonshield.com?"
 - **Final answer** from domain owner's nameservers
-- **Complete DNS record** returned (A, AAAA, CNAME, etc.)
+- **Complete DNS record** returned (A
+  - AAAA
+  - CNAME
+  - etc.)
 - **TTL (Time to Live)** specified for caching
 
 ## DNS Record Types Deep Dive
@@ -97,8 +132,12 @@ Query authoritative nameservers: "What's the IP for www.axonshield.com?"
 - **Redundancy support**: Multiple mail servers possible
 
 ### Service Records
-- **SRV Record**: Specifies service location (port, protocol, priority)
-- **Modern applications**: VoIP, instant messaging, federation
+- **SRV Record**: Specifies service location (port
+  - protocol
+  - priority)
+- **Modern applications**: VoIP
+  - instant messaging
+  - federation
 - **Service discovery**: Automatic service location
 
 ### Text Records
@@ -112,7 +151,8 @@ Query authoritative nameservers: "What's the IP for www.axonshield.com?"
 
 ### Cache Poisoning Attacks
 - **Malicious responses** injected into DNS caches
-- **Mitigation**: DNSSEC, source port randomization
+- **Mitigation**: DNSSEC
+  - source port randomization
 - **Impact**: Traffic redirection to malicious servers
 
 ### DNS Tunneling
@@ -123,7 +163,8 @@ Query authoritative nameservers: "What's the IP for www.axonshield.com?"
 ### DDoS Attacks
 - **Overwhelming DNS servers** with queries
 - **Amplification attacks** using DNS as reflector
-- **Mitigation**: Rate limiting, anycast networks
+- **Mitigation**: Rate limiting
+  - anycast networks
 
 ### DNSSEC (DNS Security Extensions)
 - **Cryptographic signatures** for DNS records
@@ -146,7 +187,8 @@ Query authoritative nameservers: "What's the IP for www.axonshield.com?"
 ### DNS Prefetching
 - **Browser optimization**: Resolve domains before needed
 - **Reduced latency**: Faster page load times
-- **Resource hints**: Preconnect, prefetch directives
+- **Resource hints**: Preconnect
+  - prefetch directives
 
 ## Modern DNS Innovations
 

@@ -1,15 +1,26 @@
 ---
-layout: post
 title: "Migrating from HashiCorp Vault"
-date: 2024-12-22
-categories: [security, migration, secrets-management]
-tags: [hashicorp-vault, migration, secrets-management, security-tools]
-image: /assets/images/posts/vault-migration/migrating-from-vault.jpg
-author: AxonShield
-original_url: https://axonshield.com/migrating-from-hashicorp-vault
+date: 2024-12-22T05:00:00-04:00
+categories:
+- security
+- migration
+- secrets-management
+tags:
+- hashicorp-vault
+- migration
+- secrets-management
+- security-tools
 ---
+![Migrating From Vault](/assets/images/posts/vault-migration/migrating-from-vault.jpg)
+*Migrating From Vault*
 
-HashiCorp Vault has been a cornerstone of secrets management for many organizations, but evolving business needs, cost considerations, or architectural changes sometimes necessitate migration to alternative solutions. Whether you're moving to cloud-native services, different vendors, or building custom solutions, a successful Vault migration requires careful planning and execution.
+HashiCorp Vault has been a cornerstone of secrets management for many organizations
+  - but evolving business needs
+  - cost considerations
+  - or architectural changes sometimes necessitate migration to alternative solutions. Whether you're moving to cloud-native services
+  - different vendors
+  - or building custom solutions
+  - a successful Vault migration requires careful planning and execution.
 
 ## Why Organizations Consider Vault Migration
 
@@ -49,7 +60,9 @@ HashiCorp Vault has been a cornerstone of secrets management for many organizati
 - **Secrets inventory**: Comprehensive catalog of all secrets stored in Vault
 - **Access patterns**: How applications and users currently access secrets
 - **Integration points**: All systems and applications that integrate with Vault
-- **Security policies**: Current authentication, authorization, and audit policies
+- **Security policies**: Current authentication
+  - authorization
+  - and audit policies
 
 #### Target State Definition
 - **Platform selection**: Choosing the destination secrets management solution
@@ -130,7 +143,10 @@ HashiCorp Vault has been a cornerstone of secrets management for many organizati
 - **Automatic rotation**: Built-in secret rotation capabilities
 - **Cost model**: Pay-per-secret pricing structure
 - **Regional availability**: Availability in all AWS regions
-- **Compliance**: SOC, PCI, ISO, and other compliance certifications
+- **Compliance**: SOC
+  - PCI
+  - ISO
+  - and other compliance certifications
 
 **Migration Steps:**
 1. **Secret analysis**: Categorize secrets by type and usage patterns
@@ -175,7 +191,8 @@ HashiCorp Vault has been a cornerstone of secrets management for many organizati
 **Migration Considerations:**
 - **Native K8s integration**: Built into Kubernetes platform
 - **Namespace isolation**: Natural isolation through Kubernetes namespaces
-- **Limited encryption**: Base64 encoding, requires additional encryption
+- **Limited encryption**: Base64 encoding
+  - requires additional encryption
 - **No rotation**: Manual secret rotation required
 - **Scaling limitations**: Not suitable for large-scale secret management
 
@@ -260,6 +277,9 @@ We help organizations successfully migrate from HashiCorp Vault through:
 - **Risk mitigation**: Proactive identification and management of migration risks
 - **Post-migration support**: Ongoing support and optimization after migration
 
-Migrating from HashiCorp Vault doesn't have to be a risky or disruptive process. With proper planning, the right tools, and experienced guidance, organizations can successfully transition to new secrets management platforms while maintaining security and operational excellence.
+Migrating from HashiCorp Vault doesn't have to be a risky or disruptive process. With proper planning
+  - the right tools
+  - and experienced guidance
+  - organizations can successfully transition to new secrets management platforms while maintaining security and operational excellence.
 
 *Original source: [Migrating from HashiCorp Vault](https://axonshield.com/migrating-from-hashicorp-vault)*

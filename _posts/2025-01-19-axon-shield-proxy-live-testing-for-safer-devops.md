@@ -1,15 +1,22 @@
 ---
-layout: post
 title: "Axon Shield Proxy - Live Testing for Safer DevOps"
-date: 2025-01-19
-categories: [devops, testing, proxy]
-tags: [proxy, testing, devops, deployment, safety]
-image: /assets/images/posts/proxy-testing/axon-shield-proxy.jpg
-author: AxonShield
-original_url: https://axonshield.com/axon-shield-proxy-live-testing-for-safer-devops
+date: 2025-01-19T05:00:00-04:00
+categories:
+- devops
+- testing
+- proxy
+tags:
+- proxy
+- testing
+- devops
+- deployment
+- safety
 ---
+![Axon Shield Proxy](/assets/images/posts/proxy-testing/axon-shield-proxy.jpg)
+*Axon Shield Proxy*
 
-Take control of your service deployments. Imagine being able to manage new system versions. Performing live testing down to single customer, while gaining insights into your system's operations. Let me introduce a revolutionary testing proxy service that empowers you to fully control changes to your applications and systems.
+Take control of your service deployments. Imagine being able to manage new system versions. Performing live testing down to single customer
+  - while gaining insights into your system's operations. Let me introduce a revolutionary testing proxy service that empowers you to fully control changes to your applications and systems.
 
 ## The Challenge of Modern Service Testing
 
@@ -94,6 +101,7 @@ Our proxy solution prioritizes safety through:
 - **Circuit breakers**: Prevent cascade failures
 - **Audit trails**: Complete visibility into all proxy decisions
 
-Transform your deployment process from risky big-bang releases to confident, gradual rollouts with Axon Shield Proxy.
+Transform your deployment process from risky big-bang releases to confident
+  - gradual rollouts with Axon Shield Proxy.
 
 *Original source: [Axon Shield Proxy - Live Testing for Safer DevOps](https://axonshield.com/axon-shield-proxy-live-testing-for-safer-devops)*

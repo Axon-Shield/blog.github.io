@@ -1,15 +1,27 @@
 ---
-layout: post
 title: "Beyond the Dashboard: Why Your SOC Needs a Human-Centered Command Center"
-date: 2025-03-25
-categories: [cybersecurity, soc, operations, human-factors]
-tags: [soc-design, human-centered-design, security-operations, command-center]
-image: /assets/images/posts/soc-design/human-centered-soc.jpg
-author: AxonShield
-original_url: https://axonshield.com/beyond-the-dashboard-why-your-soc-needs-a-human-centered-command-center
+date: 2025-03-25T05:00:00-04:00
+categories:
+- cybersecurity
+- soc
+- operations
+- human-factors
+tags:
+- soc-design
+- human-centered-design
+- security-operations
+- command-center
 ---
+![Human Centered Soc](/assets/images/posts/soc-design/human-centered-soc.jpg)
+*Human Centered Soc*
 
-Most Security Operations Centers (SOCs) are designed around technology—dashboards, tools, and data feeds. But the most effective SOCs are designed around humans—understanding how security analysts think, work, and make decisions under pressure. A human-centered approach to SOC design dramatically improves effectiveness, reduces analyst burnout, and enhances security outcomes.
+Most Security Operations Centers (SOCs) are designed around technology—dashboards
+  - tools
+  - and data feeds. But the most effective SOCs are designed around humans—understanding how security analysts think
+  - work
+  - and make decisions under pressure. A human-centered approach to SOC design dramatically improves effectiveness
+  - reduces analyst burnout
+  - and enhances security outcomes.
 
 ## The Problem with Technology-Centric SOCs
 
@@ -73,7 +85,8 @@ Technology-centric approaches lead to:
 
 ### Information Architecture
 #### Single Pane of Glass (Done Right)
-- **Contextual integration**: All relevant information in a single, coherent interface
+- **Contextual integration**: All relevant information in a single
+  - coherent interface
 - **Progressive disclosure**: Showing summary information with ability to drill down
 - **Workflow-based organization**: Information organized around analyst workflows
 - **Customizable views**: Analysts can configure displays for their specific roles
@@ -110,8 +123,10 @@ Technology-centric approaches lead to:
 - **Collaboration areas**: Dedicated spaces for team discussions and war rooms
 
 #### Technology Infrastructure
-- **High-resolution displays**: Large, high-quality monitors for complex visualizations
-- **Responsive systems**: Fast, reliable technology that doesn't impede workflow
+- **High-resolution displays**: Large
+  - high-quality monitors for complex visualizations
+- **Responsive systems**: Fast
+  - reliable technology that doesn't impede workflow
 - **Redundant capabilities**: Backup systems ensuring continuity during outages
 - **Mobile access**: Capability for analysts to work from anywhere when needed
 - **Secure communication**: Protected channels for sensitive discussions
@@ -247,6 +262,7 @@ We help organizations build human-centered SOCs through:
 - **Change management**: Supporting organizational transformation to human-centered operations
 - **Continuous optimization**: Ongoing improvement of SOC effectiveness and analyst satisfaction
 
-A human-centered SOC isn't just about making analysts happier—it's about creating more effective security operations that better protect organizations while creating sustainable, rewarding careers for security professionals.
+A human-centered SOC isn't just about making analysts happier—it's about creating more effective security operations that better protect organizations while creating sustainable
+  - rewarding careers for security professionals.
 
 *Original source: [Beyond the Dashboard: Why Your SOC Needs a Human-Centered Command Center](https://axonshield.com/beyond-the-dashboard-why-your-soc-needs-a-human-centered-command-center)*

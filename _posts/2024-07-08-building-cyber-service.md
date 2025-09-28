@@ -1,15 +1,22 @@
 ---
-layout: post
 title: "Building Cyber Service: Creating Effective Security Operations"
-date: 2024-07-08
-categories: [cybersecurity, operations, service-management]
-tags: [cyber-service, security-operations, service-delivery, SOC]
-image: /assets/images/posts/cyber-service/building-cyber-service.jpg
-author: AxonShield
-original_url: https://axonshield.com/building-cyber-service
+date: 2024-07-08T05:00:00-04:00
+categories:
+- cybersecurity
+- operations
+- service-management
+tags:
+- cyber-service
+- security-operations
+- service-delivery
+- SOC
 ---
+![Building Cyber Service](/assets/images/posts/cyber-service/building-cyber-service.jpg)
+*Building Cyber Service*
 
-Building an effective cyber service requires more than just deploying security tools. It demands a comprehensive approach to service design, delivery, and continuous improvement that treats cybersecurity as a critical business service.
+Building an effective cyber service requires more than just deploying security tools. It demands a comprehensive approach to service design
+  - delivery
+  - and continuous improvement that treats cybersecurity as a critical business service.
 
 ## Understanding Cyber Service
 
@@ -123,6 +130,8 @@ We help organizations build effective cyber services through:
 - **Operational optimization**: Enhancing existing security operations
 - **Continuous improvement**: Ongoing service enhancement and maturity development
 
-Building effective cyber service is about creating a sustainable, scalable, and business-aligned approach to cybersecurity that evolves with your organization's needs.
+Building effective cyber service is about creating a sustainable
+  - scalable
+  - and business-aligned approach to cybersecurity that evolves with your organization's needs.
 
 *Original source: [Building Cyber Service: Creating Effective Security Operations](https://axonshield.com/building-cyber-service)*
