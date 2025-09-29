@@ -59,9 +59,11 @@ Encryption is provided by AWS KMS (FIPS140-2 Level 3 security), and detailed err
 
 **Scenario A: Secret exists in new backend**
 
+```
 GET /secret/myapp/database/credentials  
 Host: [api.vault-proxy.example.com](http://api.vault-proxy.example.com)  
 X-Vault-Token: hvs.xxxxxxx
+```
 
 Control and data flow:
 
@@ -240,15 +242,17 @@ The replicate\_secret function copies the secrets from the existing backend to t
 
 Operation flow:
 
+```
 replication:  
-Check if secret exists  
-IF writing OR (reading AND not exists):  
-Encrypt data with KMS  
-Store in DynamoDB  
-Emit success metrics  
-Record metrics for stage completion  
-Handle errors without blocking main request  
-END replication
+  Check if secret exists  
+    IF writing OR (reading AND not exists):  
+      Encrypt data with KMS  
+      Store in DynamoDB  
+      Emit success metrics  
+    Record metrics for stage completion  
+    Handle errors without blocking main request  
+  END replication
+```
 
 #### 4\. Error Handling Strategy
 
@@ -419,24 +423,26 @@ The system implements a tiered logging approach starting with CloudWatch:
 
 Example log structure:
 
+```
 {  
-"timestamp": "2024-12-22T10:15:30Z",  
-"request\_data": {  
-"path": "secret/myapp/credentials",  
-"method": "GET",  
-"client\_ip": "10.0.1.100",  
-"user\_agent": "python-requests/2.28.1"  
-},  
-"response\_data": {  
-"status\_code": 200,  
-"latency\_ms": 45,  
-"backend\_source": "new"  
-},  
-"metadata": {  
-"token\_hash": "abc123...",  
-"operation\_id": "op-123"  
-}  
+  "timestamp": "2024-12-22T10:15:30Z",  
+  "request_data": {  
+    "path": "secret/myapp/credentials",  
+    "method": "GET",  
+    "client_ip": "10.0.1.100",  
+    "user_agent": "python-requests/2.28.1"  
+  },  
+  "response_data": {  
+    "status_code": 200,  
+    "latency_ms": 45,  
+    "backend_source": "new"  
+  },  
+  "metadata": {  
+    "token_hash": "abc123...",  
+    "operation_id": "op-123"  
+  }  
 }
+```
 
 #### 2\. Long-term Storage (S3)
 
@@ -452,6 +458,7 @@ Logs are archived to S3 with:
 
 Directory structure:
 
+```
 plaintextCopyvault-logs/  
 ├── YYYY/  
 │ ├── MM/  
@@ -459,6 +466,7 @@ plaintextCopyvault-logs/
 │ │ │ ├── HH/  
 │ │ │ │ ├── operation\_logs.json.gz  
 │ │ │ │ └── replication\_logs.json.gz
+```
 
 ### Metrics Collection
 
