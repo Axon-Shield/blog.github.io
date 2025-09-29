@@ -14,7 +14,7 @@ tags:
 - automation
 ---
 ![Prevent Detect Ai](/assets/images/posts/prevent-detect/prevent-detect-ai.jpg)
-*Prevent Detect Ai*
+*Detection v prevention - agility v prohibition*
 
 My topic here is detection versus prevention in cybersecurity: should we assume most of our co-workers just want to get their jobs done, or should we make cybersecurity difficult? The use case is enterprise certificate management (aka certificate lifecycle management - CLM) and its automation.
 

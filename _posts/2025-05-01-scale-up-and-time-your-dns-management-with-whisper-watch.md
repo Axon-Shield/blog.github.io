@@ -41,37 +41,21 @@ Supported DNS Providers
 DNS Whisper Watch connects to over 50 DNS providers, giving you comprehensive coverage across your entire domain portfolio. Examples include:
 
 *   AWS Route 53
-    
 *   Azure DNS
-    
 *   Google Cloud DNS
-    
 *   Cloudflare DNS
-    
 *   NS1
-    
 *   GoDaddy DNS
-    
 *   DigitalOcean DNS
-    
 *   Akamai Fast DNS
-    
 *   DNS Made Easy
-    
 *   Constellix
-    
 *   ClouDNS
-    
 *   DNSimple
-    
 *   EasyDNS
-    
 *   Neustar UltraDNS
-    
 *   BlueCat DNS
-    
 *   Rackspace Cloud DNS
-    
 *   Namecheap Premium DNS
     
 

@@ -102,6 +102,9 @@ DNS attributes offer powerful lenses through which to analyze security. Security
 
 It's important to collect these attributes and understand how they work together with each other, along with what patterns signal bad actors. These DNS attributes serve as the foundation of effective network security monitoring whether you are building a security analytics platform or conducting incident response.
 
+![ ](/assets/images/posts/dns-analytics/dns_head.jpg)
+
+
 Building Data-Driven Strategy
 -----------------------------
 
