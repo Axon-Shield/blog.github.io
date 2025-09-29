@@ -12,8 +12,9 @@ tags:
 - security-complexity
 - human-factors
 ---
-
 ![Cyber Defense Challenges](/assets/images/posts/industry-perspective/cyber-defense-challenges.jpg)
+*Cyber Defense Challenges*
+
 In the cybersecurity industry
   - we often get caught up in the latest threats
   - tools
