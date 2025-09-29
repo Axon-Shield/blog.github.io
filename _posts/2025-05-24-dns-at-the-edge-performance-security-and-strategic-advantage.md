@@ -2,7 +2,7 @@
 title: "DNS at the Edge: Performance
 - Security
 - and Strategic Advantage"
-date: 2025-03-10T05:00:00-04:00
+date: 2025-05-24T05:00:00-04:00
 categories:
 - dns
 - edge-computing

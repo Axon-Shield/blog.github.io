@@ -1,6 +1,6 @@
 ---
 title: "Cost-Benefit Analysis and TCO of WAF Deployment Models"
-date: 2025-07-08T05:00:00-04:00
+date: 2025-05-25T05:00:00-04:00
 categories:
 - cybersecurity
 - waf
