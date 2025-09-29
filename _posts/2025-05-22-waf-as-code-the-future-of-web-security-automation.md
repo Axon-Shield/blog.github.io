@@ -527,22 +527,22 @@ class WAFRuleGenerator:
             # This is a simplified representation. In reality, you'd generate a more
             # complete Terraform resource or data structure.
             terraform_rule_blocks.append(f"""
-resource "aws_wafv2_rule" "{rule['name']}" {{
-  name     = "{rule['name']}"
-  priority = {rule['priority']}
-  action {{ block {{}} }}
-  statement {{
-    ip_set_reference_statement {{
+resource "aws_wafv2_rule" "{{ rule['name'] }}" {
+  name     = "{{ rule['name'] }}"
+  priority = {{ rule['priority'] }}
+  action { block {} }
+  statement {
+    ip_set_reference_statement {
       # Assuming you have an IP Set managed elsewhere
       arn = aws_wafv2_ip_set.dynamic_threat_ips.arn
-    }}
-  }}
-  visibility_config {{
+    }
+  }
+  visibility_config {
     cloudwatch_metrics_enabled = true
-    metric_name                = "{rule['name']}Metric"
+    metric_name                = "{{ rule['name'] }}Metric"
     sampled_requests_enabled   = true
-  }}
-}}
+  }
+}
             """)
         return '\n'.join(terraform_rule_blocks)
 ```
