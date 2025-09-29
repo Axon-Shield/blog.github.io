@@ -14,272 +14,617 @@ tags:
 ![Migrating From Vault](/assets/images/posts/vault-migration/migrating-from-vault.jpg)
 *Migrating From Vault*
 
-HashiCorp Vault has been a cornerstone of secrets management for many organizations
-  - but evolving business needs
-  - cost considerations
-  - or architectural changes sometimes necessitate migration to alternative solutions. Whether you're moving to cloud-native services
-  - different vendors
-  - or building custom solutions
-  - a successful Vault migration requires careful planning and execution.
+Despite being a devops tool, HashiCorp Vault has become the go to tool for companies to manage secrets related to human interactions by extending the platform. In this blog, I aim to demonstrate how Axon Shield can further assist in securing the Vault by integrating secure interfaces for the purpose of sharing secrets. Additionally, I will also provide a comprehensive method for migrating props without any significant effort. In simple terms, I will explain how AWS KMS can be used to encrypt the database linked database.
 
-## Why Organizations Consider Vault Migration
+HashiCorp Vault factually is such an excellent platform that allows you to successfully manage secrets for CI/CD pipelines and also software integration among other things. A high number of IT corporations have taken a step further by having Vault used as a policy engine to manage the human/shared secrets for them or other software. These use cases are actually very dubious because the human themselves are the only ones capable of access to the secrets and very often a secret can be compromised the moment it was created.
 
-### Cost Optimization
-- **Licensing costs**: HashiCorp's pricing model may become expensive at scale
-- **Operational overhead**: Maintenance and management costs of self-hosted Vault
-- **Cloud alternatives**: Native cloud services offering better cost structures
-- **Resource utilization**: Moving to more efficient infrastructure models
-- **Total cost of ownership**: Holistic evaluation of all associated costs
+It is all about the combination of Axon Shield and HashiCorp Vault creating a process that allows one to extend HashiCorp Vault over its secure interfaces with the help of people when sharing secrets or even remove HashiCorp Vault for little or no disruption to current users.
 
-### Architectural Evolution
-- **Cloud-native transformation**: Moving to cloud-native secrets management
-- **Multi-cloud strategies**: Need for solutions that work across cloud providers
-- **Kubernetes integration**: Better integration with container orchestration platforms
-- **Microservices architecture**: Solutions optimized for distributed applications
-- **Service mesh integration**: Secrets management integrated with service mesh
+This planned procedure is to use a systematic approach that will enable the key components to be utilized correctly and at the same time collect the usage data for making the right decisions. An architectural design comprising the API Gateway, Lambda Proxy, DynamoDB, and CloudWatch will ensure the seamless transition and monitoring, with all the processes running on the serverless AWS cloud. Pointers on the structure are high-level representation of the flow of requests, error handling methods, and a thorough monitoring system to ensure operational efficiency, which also indicates the migration process. Significant features of the migration include gradual transition methods, detailed monitoring, and security measures both of which aim to guarant that the secrets remain intact and available during the conversion process.
 
-### Operational Requirements
-- **Simplified operations**: Reducing operational complexity and maintenance burden
-- **Improved automation**: Better integration with CI/CD and automation platforms
-- **Enhanced monitoring**: Superior observability and audit capabilities
-- **Compliance needs**: Meeting specific regulatory requirements
-- **Performance requirements**: Latency or throughput limitations
+To sum up the guide, one final touch on a checklist of the migration steps that enable businesses to seamlessly shift would mean less downtime and risk.
 
-### Strategic Considerations
-- **Vendor diversification**: Reducing dependency on single vendor solutions
-- **Technology standardization**: Aligning with organization-wide technology standards
-- **Feature requirements**: Need for capabilities not available in Vault
-- **Support considerations**: Different support model requirements
-- **Future roadmap alignment**: Solutions that align better with future plans
+Introduction
+------------
 
-## Migration Planning Framework
+A systematic approach to the migration of HashiCorp Vault confidential data from the cloud to a solution that employs AWS KMS and is backed by a database will be detailed in this guide. Moreover, one of them is knowing the change in things will be, surely.
 
-### Assessment Phase
-#### Current State Analysis
-- **Vault deployment architecture**: Understanding current Vault setup and configuration
-- **Secrets inventory**: Comprehensive catalog of all secrets stored in Vault
-- **Access patterns**: How applications and users currently access secrets
-- **Integration points**: All systems and applications that integrate with Vault
-- **Security policies**: Current authentication
-  - authorization
-  - and audit policies
+Not at all a discussion of the access control is not among the issues we are exploring but we can provide more detailing of that too, if you want us to. Please let us know.
 
-#### Target State Definition
-- **Platform selection**: Choosing the destination secrets management solution
-- **Architecture design**: Designing the new secrets management architecture
-- **Security requirements**: Defining security policies for the new platform
-- **Integration requirements**: Identifying necessary integrations and APIs
-- **Performance requirements**: Establishing performance and availability targets
+Through the AWS cloud the process of this whitepaper will be fully served with serverless, so the savings will be allowed as well as the scalability and the infrastructure of it will be easily managed. This entire system can be amalgamated within a Terraform-based CI/CD pipeline using only the elapsing time of 5 minutes to build, and/or, to demolish and repair it as well.
 
-#### Migration Strategy
-- **Migration approach**: Big bang vs. phased migration strategy
-- **Risk assessment**: Identifying and mitigating migration risks
-- **Testing strategy**: Comprehensive testing plan for migration validation
-- **Rollback planning**: Procedures for reverting to Vault if needed
-- **Timeline development**: Realistic schedule for migration completion
+### System Components
 
-### Technical Planning
-#### Data Migration
-- **Secret extraction**: Safely extracting secrets from Vault
-- **Data transformation**: Converting secrets to target platform format
-- **Encryption handling**: Maintaining security during data transfer
-- **Backup procedures**: Ensuring complete backup before migration
-- **Validation processes**: Verifying data integrity after migration
+The architecture consists of several key components working together to facilitate a seamless migration from HashiCorp Vault to a new database backend while maintaining continuous service:
 
-#### Application Integration
-- **Client library updates**: Updating applications to use new secrets management APIs
-- **Authentication changes**: Implementing new authentication mechanisms
-- **Configuration updates**: Modifying application configurations
-- **Deployment procedures**: Rolling out application changes
-- **Testing protocols**: Validating application functionality with new platform
+1.  **API Gateway**: The main entry point for all client requests
 
-## Migration Approaches
+2.  **Lambda Proxy**: Intelligent routing and replication logic have made them a new standard and must be followed to get these benefits
 
-### Big Bang Migration
-#### Advantages
-- **Faster completion**: Single migration event reduces overall timeline
-- **Reduced complexity**: No need to maintain parallel systems
-- **Clear cutover**: Definitive transition point
-- **Resource efficiency**: Concentrated effort over shorter period
-- **Immediate benefits**: Quick realization of new platform benefits
+3.  **HashiCorp Vault**: Original secret storage
 
-#### Disadvantages
-- **Higher risk**: Greater potential impact if migration fails
-- **Extensive downtime**: Potential for significant service disruption
-- **Limited testing**: Less opportunity for real-world validation
-- **Rollback complexity**: Difficult to revert if issues arise
-- **Resource intensity**: Requires significant resources in short timeframe
+4.  **DynamoDB**: New secret backend
 
-### Phased Migration
-#### Advantages
-- **Reduced risk**: Lower impact if individual phases fail
-- **Incremental validation**: Opportunity to test and validate each phase
-- **Flexible timeline**: Ability to adjust schedule based on results
-- **Learning opportunities**: Apply lessons learned to subsequent phases
-- **Easier rollback**: Simpler to revert individual components
+5.  **AWS KMS**: Encryption service or cryptographic security for the new backend
 
-#### Disadvantages
-- **Extended timeline**: Longer overall migration duration
-- **Increased complexity**: Managing multiple systems simultaneously
-- **Resource distribution**: Extended resource commitment over time
-- **Integration challenges**: Maintaining compatibility between systems
-- **Delayed benefits**: Slower realization of new platform advantages
+6.  **CloudWatch**: Monitoring and logging
 
-### Hybrid Approach
-#### Parallel Operation
-- **Dual secrets management**: Running both Vault and new platform simultaneously
-- **Selective migration**: Moving specific applications or secrets gradually
-- **Risk mitigation**: Maintaining Vault as backup during transition
-- **Gradual transition**: Slowly shifting workloads to new platform
-- **Extended validation**: Long-term testing of new platform capabilities
+Requests are accepted by the API Gateway with a lambda integration. The logic will check if the secret has already been replicated into a new backend, which is based on DynamoDB.
 
-## Migration to Specific Platforms
+Encryption is provided by AWS KMS (FIPS140-2 Level 3 security), and detailed error, and operational logs are pulled asynchronously from CloudWatch logs into an S3 bucket. AWS-integrated BI QuickSight shows basic metric that includes how many requests are served by each backend. Statistics for clients and "applications". This information feeds back into the transition process.
 
-### Cloud-Native Solutions
+### Request Flow Examples
 
-#### AWS Secrets Manager
-**Migration Considerations:**
-- **Native AWS integration**: Excellent integration with other AWS services
-- **Automatic rotation**: Built-in secret rotation capabilities
-- **Cost model**: Pay-per-secret pricing structure
-- **Regional availability**: Availability in all AWS regions
-- **Compliance**: SOC
-  - PCI
-  - ISO
-  - and other compliance certifications
+#### 1\. Reading a Secret (GET)
 
-**Migration Steps:**
-1. **Secret analysis**: Categorize secrets by type and usage patterns
-2. **IAM planning**: Design access control using AWS IAM
-3. **Application updates**: Modify applications to use AWS SDK or CLI
-4. **Automated migration**: Use AWS Migration Tools for bulk secret transfer
-5. **Validation testing**: Comprehensive testing of migrated secrets
+**Scenario A: Secret exists in new backend**
 
-#### Azure Key Vault
-**Migration Considerations:**
-- **Azure ecosystem**: Deep integration with Azure services
-- **Hardware security modules**: Support for HSM-backed keys
-- **Managed identity**: Azure AD integration for authentication
-- **Pricing flexibility**: Different pricing tiers based on usage
-- **Global availability**: Available in all Azure regions
+GET /secret/myapp/database/credentials  
+Host: [api.vault-proxy.example.com](http://api.vault-proxy.example.com)  
+X-Vault-Token: hvs.xxxxxxx
 
-**Migration Steps:**
-1. **Architecture planning**: Design Key Vault structure and access policies
-2. **Identity mapping**: Map Vault authentication to Azure AD
-3. **Secret transformation**: Convert secrets to Key Vault format
-4. **Application modification**: Update applications for Key Vault APIs
-5. **Performance validation**: Test performance and availability
+Control and data flow:
 
-#### Google Secret Manager
-**Migration Considerations:**
-- **GCP integration**: Native integration with Google Cloud services
-- **Automatic replication**: Built-in secret replication across regions
-- **IAM integration**: Google Cloud IAM for access control
-- **Audit logging**: Comprehensive audit logs through Cloud Logging
-- **Binary secret support**: Support for binary secrets and certificates
+1.  API Gateway receives request
 
-**Migration Steps:**
-1. **Project setup**: Configure Google Cloud projects and permissions
-2. **Secret categorization**: Organize secrets by project and environment
-3. **Access control design**: Implement IAM policies for secret access
-4. **Migration scripting**: Develop scripts for automated secret transfer
-5. **Integration testing**: Validate all application integrations
+2.  Lambda checks DynamoDB for path "secret/myapp/database/credentials"
 
-### Open Source Alternatives
+3.  Secret found in DynamoDB, decrypted using KMS
 
-#### Kubernetes Secrets
-**Migration Considerations:**
-- **Native K8s integration**: Built into Kubernetes platform
-- **Namespace isolation**: Natural isolation through Kubernetes namespaces
-- **Limited encryption**: Base64 encoding
-  - requires additional encryption
-- **No rotation**: Manual secret rotation required
-- **Scaling limitations**: Not suitable for large-scale secret management
+4.  Response returned directly from new backend
 
-#### External Secrets Operator
-**Migration Considerations:**
-- **Multi-provider support**: Can integrate with various external secret stores
-- **Kubernetes native**: Designed specifically for Kubernetes environments
-- **Synchronization**: Automatic synchronization of external secrets
-- **Provider flexibility**: Can change backend providers without application changes
-- **Operational overhead**: Requires management of operator and configurations
+5.  Response includes header X-Backend-Source: new
 
-## Common Migration Challenges
+**Scenario B: Secret not yet in new backend**
 
-### Technical Challenges
-#### Data Compatibility
-- **Secret format differences**: Different platforms may use different secret formats
-- **Encryption key management**: Handling encryption keys during migration
-- **Metadata preservation**: Maintaining secret metadata and policies
-- **Version history**: Preserving or migrating secret version history
-- **Path structure differences**: Adapting to different secret organization models
+Control and data flow:
 
-#### Authentication Integration
-- **Identity provider mapping**: Mapping Vault authentication to new platform
-- **Token compatibility**: Handling different token formats and lifecycles
-- **Policy translation**: Converting Vault policies to target platform equivalents
-- **Multi-factor authentication**: Implementing MFA in new platform
-- **Service account migration**: Moving service account credentials
+1.  API Gateway receives request
 
-#### Application Updates
-- **SDK changes**: Updating applications to use new platform SDKs
-- **Configuration management**: Updating configuration management systems
-- **Deployment pipeline updates**: Modifying CI/CD pipelines
-- **Monitoring integration**: Updating monitoring and alerting systems
-- **Documentation updates**: Maintaining accurate documentation
+2.  Lambda checks DynamoDB for path "secret/myapp/api/key"
 
-### Operational Challenges
-#### Downtime Management
-- **Service availability**: Minimizing impact on application availability
-- **Maintenance windows**: Coordinating migration activities
-- **Rollback procedures**: Ensuring ability to quickly revert changes
-- **Communication planning**: Keeping stakeholders informed of progress
-- **Emergency procedures**: Handling unexpected issues during migration
+3.  Secret not found in DynamoDB
 
-#### Team Coordination
-- **Cross-team collaboration**: Coordinating between multiple teams
-- **Knowledge transfer**: Ensuring teams understand new platform
-- **Training requirements**: Training staff on new tools and procedures
-- **Process updates**: Updating operational procedures and runbooks
-- **Change management**: Managing organizational change
+4.  Request forwarded to Vault
 
-## Best Practices for Successful Migration
+5.  Secret retrieved from Vault
 
-### Planning and Preparation
-- **Comprehensive discovery**: Thoroughly understand current Vault usage
-- **Stakeholder engagement**: Involve all affected teams in planning
-- **Risk assessment**: Identify and plan for potential risks
-- **Testing strategy**: Develop comprehensive testing plans
-- **Communication plan**: Keep all stakeholders informed throughout process
+6.  Lambda replicates secret to new backend:
 
-### Execution Excellence
-- **Pilot migration**: Start with non-critical applications or environments
-- **Automated tooling**: Use automation to reduce errors and increase speed
-- **Monitoring and validation**: Continuously monitor migration progress
-- **Documentation**: Maintain detailed documentation throughout process
-- **Quality assurance**: Implement rigorous quality checks at each step
+7.  Encrypts data using KMS
+    *   Stores in DynamoDB
 
-### Post-Migration Optimization
-- **Performance tuning**: Optimize new platform for your specific use cases
-- **Security hardening**: Implement platform-specific security best practices
-- **Operational procedures**: Establish ongoing operational procedures
-- **Training completion**: Ensure all teams are fully trained on new platform
-- **Continuous improvement**: Regularly assess and improve processes
+8.  Original Vault response returned to client
 
-## The Axon Shield Migration Advantage
+9.  Response includes header X-Backend-Source: vault
 
-We help organizations successfully migrate from HashiCorp Vault through:
+**Error Scenario - Example Vault Unreachable**
 
-- **Comprehensive assessment**: Thorough evaluation of current state and migration requirements
-- **Strategic planning**: Development of optimal migration strategy and approach
-- **Technical expertise**: Deep knowledge of Vault and target platforms
-- **Automation development**: Custom tools and scripts for efficient migration
-- **Risk mitigation**: Proactive identification and management of migration risks
-- **Post-migration support**: Ongoing support and optimization after migration
+Flow if secret exists in new backend:
 
-Migrating from HashiCorp Vault doesn't have to be a risky or disruptive process. With proper planning
-  - the right tools
-  - and experienced guidance
-  - organizations can successfully transition to new secrets management platforms while maintaining security and operational excellence.
+1.  Lambda fails to reach Vault
 
-*Original source: [Migrating from HashiCorp Vault](https://axonshield.com/migrating-from-hashicorp-vault)*
+2.  Since secret exists in DynamoDB, returns from new backend
+
+3.  Service continues without interruption
+
+Flow if secret not in new backend:
+
+1.  Lambda fails to reach Vault
+
+2.  Returns 503 Service Unavailable
+
+3.  Error logged to CloudWatch
+
+4.  Metric emitted for monitoring
+
+Let's see how we are implementing the service.
+
+Phase 1: Implementing the Monitoring Proxy
+------------------------------------------
+
+An infrastructure that uses an API Gateway is supported by AWS Lambda and Amazon API Gateway that intercept the Vault API calls providing it with a scalable and managed solution. Here's the detailed architecture
+
+### Infrastructure - API Gateway
+
+API Gateway refers to the basic infrastructure components that award for the API requests to be processed.
+
+#### 1\. REST API Definition
+
+We need to start by creating a regional API Gateway instance. But why are we doing it in a specific region instead of in any possible region?
+
+*   It has been recently to be found out that this kind of edge endpoint can be used for multiple AWS network carrier customers at once.
+
+*   Edge-optimized endpoints can be sometimes of worse latency compared to regional endpoints.
+
+*   It could be rather better if we speak about the cost as opposed to edge-optimized endpoints.
+
+#### 2\. Proxy Resource Configuration
+
+It refers to the configuration of the path using the {proxy+} path parameter is inexpendable because:
+
+*   It takes into account the ones that are yet to come.
+
+*   Synchronizes Vault's hierarchical path structure
+
+*   Dynamic-key
+
+*   By this way, all the terms beginning with /secret/myapp/credentials get the correct mapping
+
+#### 3\. Method Configuration
+
+The configuration must handle any request - that's why we implement an ANY method configuration:
+
+*   Permits all HTTP methods (GET, POST, PUT, DELETE)
+
+*   It is the most flexible API of all that Vault has around
+
+*   It is extendable meaning that future HTTP methods can be added without changes
+
+*   For sure, it does complete the process of preserving the original request method for Lambda
+
+#### 4\. Lambda Integration
+
+The Lambda proxy integration technique enables the API GW to directly call Lambda functions and thereby increase scalability. Since this approach only allows texts of a maximum of 1MB to be returned, it is less than the one Hashicorp Vault stays. What was doubled, do you think?
+
+*   AWS\_PROXY is used to directly integrate with Lambda
+
+*   Request details are mapped to Lambda event auto
+
+*   Headers, query strings, and body are retained
+
+*   Transformation overhead is reduced
+
+#### Security Considerations
+
+1.  **Authorization**:
+    Authorization is handled at the Lambda level
+    *   Preserves Vault token authentication
+    *   Allows for future auth method additions
+
+2.  **Request Validation**:
+    Path parameters are required
+    *   Method validation at Lambda layer
+    *   Preserves Vault's security model
+
+3.  **SSL/TLS**:
+    HTTPS enforced by default
+    *   TLS termination at API Gateway
+    *   Backend communication secured
+
+### Logic - Lambda Proxy
+
+#### 1\. Main Handler Function
+
+The Lambda handler is the gate that directs all requests and has the following main roles:
+
+*   Parse received API Gateway events
+
+*   Route the requests based on HTTP method
+
+*   Chosen a strategy to implement read caching
+
+*   Handle errors and metrics generation
+
+#### 2\. New Backend Read Function
+
+The get\_secret\_from\_new\_backend function executes the read method of the new backend:
+
+*   Queries DynamoDB for the latest version of the secret
+
+*   Decrypts data utilizing KMS
+
+*   Provides a formatted response matching the Vault's format
+
+*   Provides None in case the secret is not found
+
+Error handling:
+
+*   DynamoDB errors are not the cause of request failure
+
+*   KMS decryption errors will be tracked and fallback will be used
+
+*   Moreover, the path will be kept running even under partial failures
+
+#### 3\. Secret Replication Function
+
+The replicate\_secret function copies the secrets from the existing backend to the new one as follows:
+
+*   Three separate steps to accomplish the task (verify, encrypt, store)
+
+*   Every step is analyzed in detail
+
+*   Non-blocking operation
+
+*   Use of an idempotent design
+
+Operation flow:
+
+replication:  
+Check if secret exists  
+IF writing OR (reading AND not exists):  
+Encrypt data with KMS  
+Store in DynamoDB  
+Emit success metrics  
+Record metrics for stage completion  
+Handle errors without blocking main request  
+END replication
+
+#### 4\. Error Handling Strategy
+
+The Lambda implements comprehensive error handling:
+
+1.  **Vault Errors**:
+    Network timeouts
+    *   Authentication failures
+    *   Permission issues
+    *   Records error type and returns appropriate status
+
+2.  **DynamoDB Errors**:
+    Throttling
+    *   Consistency issues
+    *   Permission problems
+    *   Allows fallback to Vault
+
+3.  **KMS Errors**:
+    Key access issues
+    *   Encryption/decryption failures
+    *   Records for monitoring
+
+#### 5\. Metric Emission
+
+The Lambda emits detailed metrics for monitoring:
+
+1.  **Operation Metrics**:
+    Read vs Write operations
+    *   Backend source (new vs Vault)
+    *   Response times
+    *   Error rates
+
+2.  **Stage Metrics**:
+    Success/failure per stage
+    *   Stage duration
+    *   Error categorization
+
+3.  **Migration Progress**:
+    Replication success rate
+    *   Backend usage distribution
+    *   Error patterns
+
+### Key Design Aspects
+
+#### 1\. Read-Through Strategy
+
+The Lambda implements an intelligent read-through strategy:
+
+*   Checks new backend first for reads
+
+*   Falls back to Vault if not found
+
+*   Automatically replicates missing secrets
+
+*   Maintains consistency during migration
+
+#### 2\. Write Handling
+
+Write operations follow a specific pattern:
+
+*   Always write to Vault first
+
+*   Only replicate on successful Vault write
+
+*   Ensures Vault remains source of truth
+
+*   Maintains consistency across backends
+
+#### 3\. Performance Considerations
+
+The implementation optimizes for performance:
+
+*   Asynchronous replication where possible
+
+*   Minimal blocking operations
+
+*   Efficient error handling
+
+*   Request pipelining
+
+#### 4\. Security Implementation
+
+Security measures include:
+
+*   Token forwarding to Vault
+
+*   KMS encryption for new backend
+
+*   Secure error handling
+
+*   Audit logging
+
+### Migration Features
+
+#### 1\. Progressive Migration
+
+The design supports gradual migration:
+
+*   No downtime required
+
+*   Secrets migrate on first access
+
+*   Write operations maintain consistency
+
+*   Fallback capabilities
+
+#### 2\. Monitoring and Visibility
+
+Comprehensive monitoring through:
+
+*   CloudWatch metrics
+
+*   Structured logging
+
+*   Error tracking
+
+*   Migration progress metrics
+
+#### 3\. Operational Controls
+
+The implementation includes:
+
+*   Circuit breakers for backend failures
+
+*   Configurable timeouts
+
+*   Error thresholds
+
+*   Monitoring alerts
+
+### Error Categories
+
+The implementation categorizes errors into:
+
+1.  **Infrastructure Errors**:
+    Network issues
+    *   Service unavailability
+    *   Timeout problems
+
+2.  **Data Errors**:
+    Validation failures
+    *   Format issues
+    *   Version conflicts
+
+3.  **Permission Errors**:
+    Authentication failures
+    *   Authorization issues
+    *   Token problems
+
+4.  **Replication Errors**:
+    Encryption failures
+    *   Storage issues
+    *   Consistency problems
+
+### Monitoring and Logging Infrastructure
+
+#### 1\. Short-term Logging (CloudWatch)
+
+The system implements a tiered logging approach starting with CloudWatch:
+
+*   1-week retention in CloudWatch Logs
+
+*   Structured JSON log format
+
+*   Real-time log ingestion
+
+*   Immediate searchability
+
+Example log structure:
+
+{  
+"timestamp": "2024-12-22T10:15:30Z",  
+"request\_data": {  
+"path": "secret/myapp/credentials",  
+"method": "GET",  
+"client\_ip": "10.0.1.100",  
+"user\_agent": "python-requests/2.28.1"  
+},  
+"response\_data": {  
+"status\_code": 200,  
+"latency\_ms": 45,  
+"backend\_source": "new"  
+},  
+"metadata": {  
+"token\_hash": "abc123...",  
+"operation\_id": "op-123"  
+}  
+}
+
+#### 2\. Long-term Storage (S3)
+
+Logs are archived to S3 with:
+
+*   Structured directory hierarchy
+
+*   Compression for storage efficiency
+
+*   Lifecycle policies for cost optimization
+
+*   Athena-optimized format
+
+Directory structure:
+
+plaintextCopyvault-logs/  
+├── YYYY/  
+│ ├── MM/  
+│ │ ├── DD/  
+│ │ │ ├── HH/  
+│ │ │ │ ├── operation\_logs.json.gz  
+│ │ │ │ └── replication\_logs.json.gz
+
+### Metrics Collection
+
+#### 1\. Operational Metrics
+
+Real-time metrics tracking:
+
+*   Request Metrics
+
+*   Replication Metrics
+
+*   Client Metrics
+
+#### 2\. Migration Progress Metrics
+
+Tracking migration status:
+
+*   Percentage of secrets in new backend
+
+*   Replication success rate
+
+*   Access patterns
+
+*   Usage distribution
+
+### Monitoring Dashboards
+
+#### 1\. CloudWatch Dashboards
+
+Operational monitoring includes:
+
+*   API Performance
+
+*   Replication Status
+
+*   System Health
+
+#### 2\. QuickSight Analytics
+
+The QuickSight framework allows businesses to track the migration process and uncover usage data for each secret. Metrics involve:
+
+*   Migration Overview: progress tracking, success rates, error patterns, timeline projections
+
+*   Access Analysis: client usage patterns, application behavior, secret popularity, access frequency
+
+*   Performance Analysis: response time trends, error rate patterns, backend comparison, resource utilization
+
+### Alerting Infrastructure
+
+#### 1\. Operational Alerts
+
+Immediate alerting for: high error rates, latency spikes, replication failures, system availability
+
+Alert thresholds (examples):
+
+*   Error Rate: > 5% over 5 minutes
+
+*   Latency: > 500ms p95 over 5 minutes
+
+*   Replication: < 95% success rate
+
+*   System: Any component unavailable
+
+#### 2\. Migration Alerts
+
+Migration-specific monitoring: replication lag, consistency issues, usage patterns, progress metrics
+
+Service Operational Procedures
+------------------------------
+
+### 1\. Monitoring Response
+
+Defined procedures for:
+
+*   Alert investigation
+
+*   Error remediation
+
+*   Performance issues
+
+*   System recovery
+
+### 2\. Maintenance
+
+Regular maintenance includes:
+
+*   Log rotation
+
+*   Metric cleanup
+
+*   Dashboard updates
+
+*   Report generation
+
+Service Business Features
+-------------------------
+
+1.  **Scalability**
+    API Gateway automatically scales to handle varying loads
+    *   Lambda concurrency handles multiple simultaneous requests
+    *   DynamoDB auto-scaling for access logs
+
+2.  **Security**
+    IAM roles for fine-grained access control
+    *   Optional request authentication at API Gateway
+    *   SSL/TLS termination at API Gateway
+    *   Token hashing for secure correlation
+
+3.  **Monitoring**
+    CloudWatch metrics for API Gateway and Lambda
+    *   X-Ray tracing for request analysis
+    *   CloudWatch Logs for detailed Lambda logs
+    *   DynamoDB streams for log processing
+
+4.  **High Availability**
+    Multi-AZ deployment through API Gateway
+    *   Lambda automatic retries
+    *   DynamoDB global tables option for multi-region setup
+
+Phase 2: Secret Replication Process
+-----------------------------------
+
+The tightly integrated design of data replication combines with the proxy to capture secrets during both read and write operations:
+
+1.  **Write Operations (POST/PUT)**
+    In Vault when a secret is either created or updated
+    *   After successful Vault write
+    *   Before returning response to client
+
+2.  **Read Operations (GET)**
+    After a secret is read from the Vault
+    *   After receipt of the answer from the Vault
+    *   Before returning to the client
+
+Phase 3: Analyzing Usage Patterns
+---------------------------------
+
+1.  Appoint the seldom accessed password as a review item
+
+2.  Be open to the option of a notification tool that will pop up close inactivity time
+
+3.  Prepare a detailed guide to retire unused secrets
+
+### Migration Checklist
+
+1.  Deploy the service of the monitoring proxy
+
+2.  Keep track of the usage data for a period of not less than one month
+
+3.  Configure AWS KMS infrastructure
+
+4.  Implement secret replication
+
+5.  Analyze usage patterns
+
+6.  Plan the migration schedule based on the usage patterns
+
+7.  Check the ability of the new system with a secret retrieval
+
+8.  Gradual transition of applications
+
+9.  Decommission unused secrets
+
+10.  Plan Vault decommissioning
+
+Conclusion
+----------
+
+This migration approach is about the systematic steps and maintenance of operational integrity. To have a good working procedure we must be sure that all the usage data is detailed and collected first, only then we can work with this information to devise the right migration strategy.
