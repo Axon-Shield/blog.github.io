@@ -1,6 +1,6 @@
 ---
 title: "Reclaim Control Over Your Cyber Defense: Empowerment Over Fear"
-date: 2025-04-05T05:00:00-04:00
+date: 2024-11-24T05:00:00-04:00
 categories:
 - cybersecurity
 - strategy
