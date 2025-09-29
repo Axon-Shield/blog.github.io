@@ -17,11 +17,6 @@ tags:
 
 AXON Shield is a combination of professional services and a technology platform. It helps its clients overcome key cybersecurity challenges by taking over SaaS configurations, consolidating multiple security tools into its unified platform to maximise visibility of important information across cyber SaaS tools and clients' environments. With streamlined monitoring, AXON Shield shines light on security gaps and can create plans of actions or establish incident response runbooks. This level of support allows you to focus on value-generating skills when hiring your team.
 
-
-![](https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1024,h=434,fit=crop/mjEvZ1ePXxtyy8VB/api_background-A1awjKjgl8T8g5e3.jpg)
-
-![](https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=366,fit=crop/mjEvZ1ePXxtyy8VB/api_background-A1awjKjgl8T8g5e3.jpg)
-
 In today’s complex digital landscape, cyber security managers' biggest challenge is to utilise data and tools they already have at their disposal. Your ability to build your team is made extremely difficult by the range of tasks. You need to setup your SaaS and internal tools, understand vendors' language to get the right support and being able to not only analyse but even see the data that is important. Instead of focusing on actual threats and improving your company's security posture, you get bogged down by management of complex and disparate security solutions, monitoring network activities across hybrid environments, and managing the overwhelming volume of security alerts. AXON Shield has been created to address these pain points directly.
 
 Empowering You To Focus On Value-Generating Skills
