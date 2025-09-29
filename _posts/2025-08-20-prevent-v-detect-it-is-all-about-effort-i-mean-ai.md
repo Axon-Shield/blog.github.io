@@ -16,246 +16,67 @@ tags:
 ![Prevent Detect Ai](/assets/images/posts/prevent-detect/prevent-detect-ai.jpg)
 *Prevent Detect Ai*
 
-The classic cybersecurity debate between prevention and detection has taken on new dimensions in the age of artificial intelligence. While we joke that "effort" has been replaced by "AI" as the solution to everything
-  - the reality is more nuanced. AI is fundamentally changing both prevention and detection capabilities
-  - but it's the allocation of intelligent effort that determines success.
+My topic here is detection versus prevention in cybersecurity: should we assume most of our co-workers just want to get their jobs done, or should we make cybersecurity difficult? The use case is enterprise certificate management (aka certificate lifecycle management - CLM) and its automation.
 
-## The Classic Prevention vs. Detection Debate
+Let’s say that you’re responsible for the technology side of a project building an enterprise certificate management system. The goal of such a project is to minimize downtimes due to expired certificates through automation. This is a significant problem to solve, and even a relatively small company will have many different ways it uses certificates, making a centralized system available for all of them quite challenging. Sooner or later, you will find that not everything can be automated. The point is to make it as painless as possible.
 
-### The Prevention Argument
-**"Prevention is better than cure"**
-- **Stop attacks before they happen**: Block threats at the perimeter
-- **Reduce incident response costs**: Fewer breaches mean lower response costs
-- **Minimize business impact**: No successful attacks mean no business disruption
-- **Compliance simplification**: Easier to meet regulations if breaches don't occur
-- **Resource efficiency**: Preventing attacks is cheaper than responding to them
+We have built this kind of automation many times, so the technology itself has been relatively easy ever since Let’s Encrypt “codified” the ACME protocol (RFC 8555). At some point, however, you may begin to receive pushback from users within the client organization. They might start complaining that the way you control onboarding is not secure enough.
 
-### The Detection Argument
-**"Perfect prevention is impossible"**
-- **Attackers always find a way**: Prevention will eventually fail
-- **Unknown unknowns**: New attack methods bypass prevention
-- **Inside threats**: Prevention can't stop insider attacks
-- **Supply chain attacks**: Attacks through trusted channels
-- **Human factors**: People will always make mistakes
+Spanner in the Works
+--------------------
 
-### The Traditional Middle Ground
-Most organizations adopted a layered approach:
-- **Defense in depth**: Multiple prevention layers with detection backup
-- **80/20 rule**: Prevent what you can
-  - detect the rest
-- **Risk-based approach**: Heavy prevention for high-value assets
-- **Practical balance**: Prevention where cost-effective
-  - detection elsewhere
-- **Continuous improvement**: Learn from detections to improve prevention
+This is the point when you, as the team delivering automation, can easily find yourself between a rock and a hard place. The challenge here is to combine the technology with the operational model to create a service that can be accepted across the entirety of the client’s company.
 
-## Enter Artificial Intelligence
+Let’s say you integrate (which is often the case) your automated certificate issuance with the company’s configuration management database (CMDB). What you can easily achieve is the automation of certificate issuance and the upload of all new certificates into the CMDB, allowing other teams to integrate that into their overall enterprise reporting.
 
-### AI Changes Everything (And Nothing)
-The AI revolution affects both prevention and detection:
-- **Enhanced prevention**: AI can predict and prevent previously unknown attacks
-- **Better detection**: AI can identify subtle patterns humans miss
-- **Automation**: AI can operate at machine speed and scale
-- **Continuous learning**: AI improves over time with more data
-- **Cost reduction**: AI can potentially reduce human effort
+You may also want to use the CMDB to create relationships between certificates, applications, and support teams. One way to do this is to capture all that information in service requests that are part of the onboarding process for the automation. If the automation can use the service request reference as part of the process, you suddenly gain a robust integration with enterprise operational workflows.
 
-But fundamental challenges remain:
-- **Adversarial AI**: Attackers using AI to bypass AI defenses
-- **Data quality**: AI is only as good as the data it learns from
-- **False positives**: AI can generate overwhelming false alarms
-- **Explainability**: Understanding why AI made specific decisions
-- **Human oversight**: Need for human judgment in AI decisions
+We usually try to reuse as many existing workflows as possible. If an application team needs to automate certificates, they create a request in the CMDB and then use the reference as part of the certificate client configuration. This reference essentially acts like a “username” that links certificates to the initial requests and, as such, to all the contextual information you may need.
 
-### The New Prevention Paradigm
+Issues can begin to arise quickly if the service operations—i.e., the people overseeing certificate management—don’t keep an eye on what is happening. A part of any operational model should include procedures to deal with unauthorized certificates and incorrect sharing of API and client authentication keys. The technology provides enough information to support such processes, but it is not your team’s responsibility, and most likely, it will be an internal team that has to learn everything from scratch. Managing a service is a complex task.
 
-#### Predictive Prevention
-AI enables new forms of prevention:
-- **Threat prediction**: Forecasting attacks before they happen
-- **Behavioral prevention**: Blocking actions based on behavioral patterns
-- **Preemptive patching**: Identifying and fixing vulnerabilities before exploitation
-- **Dynamic adaptation**: Prevention rules that adapt in real-time
-- **Context-aware blocking**: Prevention that understands business context
+**Operating an Automated Service**
+----------------------------------
 
-#### Intelligent Automation
-AI automates previously manual prevention tasks:
-- **Automatic rule generation**: Creating prevention rules from detected patterns
-- **Dynamic policy updates**: Adjusting security policies based on threat intelligence
-- **Real-time response**: Instant prevention actions based on AI analysis
-- **Predictive maintenance**: Preventing security failures before they occur
-- **Adaptive defense**: Security controls that evolve with threats
+When you think about automation and running an automated service, the main focus of its operational model should be ensuring you know what to do when things go wrong. The challenge is that when such a service is introduced, not much tends to break initially. It’s easy for service owners to start thinking that they don’t need to put any effort into improving the service model.
 
-### The New Detection Reality
+However, two things will eventually happen. Firstly, things with a long lifecycle will trigger actions that may not have undergone as much testing. Secondly, as the service penetrates further across your company, users will start encountering difficulties that need to be addressed.
 
-#### Enhanced Pattern Recognition
-AI dramatically improves detection capabilities:
-- **Anomaly detection**: Identifying deviations from normal behavior
-- **Advanced correlation**: Finding relationships humans miss
-- **Real-time analysis**: Processing massive data streams instantly
-- **Subtle pattern detection**: Identifying sophisticated attack patterns
-- **Multi-dimensional analysis**: Analyzing threats across multiple vectors
+Here’s one example of what we experienced when more regulated clients wanted to start using the certificate automation.
 
-#### Reduced Human Burden
-AI handles routine detection tasks:
-- **Initial triage**: Filtering and prioritizing alerts
-- **Evidence gathering**: Automatically collecting relevant information
-- **Timeline reconstruction**: Building attack timelines automatically
-- **Impact assessment**: Estimating potential damage from detected threats
-- **Response recommendations**: Suggesting appropriate response actions
+![Prevent Detect Ai](/assets/images/posts/prevent-detect/prevent-detect-crowd.jpg)
 
-## The Effort Equation
+The operational model was geared towards “low onboarding friction.” The technology had built-in hooks to support the resolution of unauthorized use, but these were not fully operationalized. The regulated clients feared onboarding, and their initial conversations with the service owner resulted in more confusion and irrational behavior. This can be explained by analogizing it to applying for a driving license. Their position was: we don’t want to obtain a driving license (automated certificates) because driving licenses can be used for identity fraud (someone else acquires certificates for our servers). Not using the service will not protect them from “identity fraud,” but the confusion was such that, at that point, the service had to implement excessive changes to calm things down.
 
-### Where Human Effort Goes
-Despite AI advancement
-  - human effort remains crucial:
+Eventually, we identified three actions to improve the situation and regain the trust of users. Our aim was still to achieve as little friction as possible, but it had to become part of the changes.
 
-#### Strategic Planning
-- **AI strategy development**: Deciding how to use AI effectively
-- **Model selection**: Choosing appropriate AI models for specific threats
-- **Data strategy**: Ensuring AI has quality data to learn from
-- **Integration planning**: Incorporating AI into existing security infrastructure
-- **Performance optimization**: Tuning AI systems for optimal performance
+1.  Prevent 1 - Increase interactions with new users to prevent the completely automated launch of new ACME software clients. This increases the effort required by the service users, but we were able to implement it as a self-service option.
+    
+2.  React 1 - Increase the ability to detect incorrect or improper behavior. No technological changes were required for this. Operationally, however, the team had to review their operating model and strengthen their oversight. New certificates were logged in a main inventory system, and their new tasks included daily reviews of issued certificates and the revocation of those violating agreed-upon terms and conditions (or cybersecurity standards). The team was able to implement this and start resolving situations within one business day.
+    
+3.  React 2 - The technology was already integrated into the client’s business intelligence dashboards, but events marked as security-related were not consistently followed up on. One such example was the “floating IP addresses” of registered clients. These events indicate that a registered software client changes the IP address from which it connects to the service. While this behavior is mostly non-malicious, it can also indicate that a client (API) key has been compromised.
+    
+4.  Prevent 2 - The final action was to increase friction for clients coming from “untrusted networks.” At this point, we had a better understanding of which IP ranges belong to the client and which were “external.” This understanding allowed us to configure and start enforcing existing technology controls. When new clients connected from external IP addresses, they would have to authorize their connection by responding to Slack or email prompts.
+    
 
-#### Oversight and Governance
-- **Model training**: Supervising AI learning processes
-- **Bias detection**: Ensuring AI doesn't develop harmful biases
-- **Explainability**: Understanding and explaining AI decisions
-- **Compliance**: Ensuring AI use meets regulatory requirements
-- **Ethics**: Managing ethical implications of AI in security
+**Resolution**
+--------------
 
-#### Incident Response
-- **Complex investigations**: Handling sophisticated attacks requiring human judgment
-- **Stakeholder communication**: Explaining incidents to business stakeholders
-- **Forensic analysis**: Deep investigation requiring human expertise
-- **Recovery planning**: Developing business recovery strategies
-- **Lessons learned**: Extracting insights to improve future security
+Unsurprisingly, the technology changes from our side took priority. This isn’t surprising—conflicting interests often lead to choosing the path of least resistance first. Additionally, while the operational team was growing, new members were only learning the service features and gaining confidence in how to use them.
 
-### The AI Effort Multiplier
-AI doesn't eliminate effort; it multiplies human effectiveness:
-- **Force multiplication**: AI allows small teams to handle larger workloads
-- **Skill amplification**: AI enhances human analytical capabilities
-- **Speed increase**: AI accelerates human decision-making
-- **Scale expansion**: AI enables security operations at unprecedented scale
-- **Quality improvement**: AI reduces human error and oversight
+We could see that the governance model was not ideal, and we strongly encouraged the operational team to increase their engagement with users and create a “technology forum.” This forum would allow customer teams to raise their concerns, enabling the operations team to respond, suggest possible solutions, and listen to other users to understand the impact across the user base.
 
-## The Modern Security Strategy
+We have no way to instruct the client on how to build their operational model, but it was clear to everyone that communication towards users must be much stronger. Just as the technology remained fairly low-friction, enabling users to raise concerns should also be low-friction. Users need to be able to pose questions easily and receive prompt responses.
 
-### Prevention-First with AI Enhancement
-Modern prevention strategies leverage AI for:
-- **Predictive blocking**: Preventing attacks before they develop
-- **Behavioral prevention**: Stopping attacks based on behavior patterns
-- **Dynamic policies**: Prevention rules that adapt automatically
-- **Threat hunting**: Proactively hunting for emerging threats
-- **Vulnerability management**: Prioritizing patches based on AI risk assessment
+In one particular example, every new team using the service had to go through an onboarding process. The main point was to understand the use case and grasp what to do in case of breakages. This meant that establishing communication with users was quite straightforward, as there was a list of contact details. The difficult part was encouraging—mostly engineers—to overcome their timidity and start talking to other engineers. While this initial step can be challenging, it has a massively positive impact on how the service is perceived and trusted.
 
-### Detection as Learning Engine
-Detection becomes the training ground for prevention:
-- **Model improvement**: Using detection data to improve prevention models
-- **Pattern discovery**: Finding new attack patterns to prevent
-- **False positive reduction**: Learning to distinguish threats from normal activity
-- **Attack attribution**: Understanding attack methods to improve prevention
-- **Trend analysis**: Identifying emerging threats for preventive measures
+**Lessons Learned**
+-------------------
 
-### Integrated AI Security Operations
-The future is integrated AI-powered security:
-- **Unified platforms**: Single platforms handling both prevention and detection
-- **Shared intelligence**: Prevention and detection systems learning from each other
-- **Continuous feedback loops**: Constant improvement based on both successes and failures
-- **Adaptive response**: Security responses that adapt based on AI analysis
-- **Predictive security**: Anticipating and preventing future attacks
+As technology partners, we were not involved in initial conversations and missed opportunities to enhance the understanding of the technology controls. While this is something we cannot change for the future, our lesson was to improve documentation and enhance the operational teams’ understanding of the technology. The goal is for them to be able to answer questions correctly before concerns escalate to Level 3 support.
 
-## Implementation Strategies
+Returning to my initial question: detect vs. prevent. Should we increase friction and complicate the use of automation, or should we improve detection, assuming that 99% of users just want to get on with their jobs?
 
-### Building AI-Enhanced Prevention
-#### Technology Components
-- **Machine learning platforms**: Robust ML infrastructure for security applications
-- **Threat intelligence integration**: Connecting AI with external threat data
-- **Behavioral analytics**: Understanding normal vs. abnormal behavior
-- **Real-time processing**: Instant analysis and response capabilities
-- **Adaptive controls**: Security controls that learn and evolve
+The latter is indeed the more difficult option—the actual service owner has to take on a lot of responsibility and “pain.” However, many manual tasks that represent that pain can be handled with AI agentic systems. What this means is that the technology can alleviate the burden on those operating automated services.
 
-#### Organizational Capabilities
-- **Data science skills**: Teams capable of developing and maintaining AI models
-- **Security expertise**: Deep understanding of threats and attack methods
-- **Process integration**: Incorporating AI into existing security processes
-- **Change management**: Managing organizational change for AI adoption
-- **Continuous learning**: Culture of experimentation and improvement
-
-### Optimizing AI-Powered Detection
-#### Advanced Analytics
-- **Multi-dimensional analysis**: Analyzing threats across multiple data sources
-- **Temporal pattern analysis**: Understanding how attacks unfold over time
-- **Entity relationship analysis**: Mapping relationships between different entities
-- **Risk scoring**: Quantifying threat risk using AI models
-- **Contextual analysis**: Understanding threats in business context
-
-#### Operational Excellence
-- **Alert quality**: Reducing false positives while maintaining sensitivity
-- **Response automation**: Automating appropriate response actions
-- **Investigation support**: AI assistance for human investigators
-- **Performance monitoring**: Continuously monitoring AI system performance
-- **Model maintenance**: Keeping AI models current and effective
-
-## Measuring Success
-
-### Prevention Metrics
-- **Attack prevention rate**: Percentage of attacks prevented before impact
-- **False positive rate**: Accuracy of prevention decisions
-- **Prevention coverage**: Scope of threats covered by prevention systems
-- **Time to prevention**: Speed of implementing new prevention measures
-- **Business impact**: Effect of prevention on business operations
-
-### Detection Metrics
-- **Detection accuracy**: Correctly identifying true threats
-- **Time to detection**: Speed of identifying security incidents
-- **Investigation efficiency**: Time and effort required for investigation
-- **Response effectiveness**: Success of incident response actions
-- **Learning velocity**: Rate of improvement in detection capabilities
-
-### AI Performance Metrics
-- **Model accuracy**: Correctness of AI predictions and classifications
-- **Processing speed**: Speed of AI analysis and response
-- **Adaptation rate**: How quickly AI adapts to new threats
-- **Resource efficiency**: Computational resources required for AI operations
-- **Human productivity**: Impact of AI on human analyst effectiveness
-
-## The Future of Prevention and Detection
-
-### Emerging Trends
-#### Adversarial AI
-- **AI vs. AI**: Attackers using AI to bypass AI defenses
-- **Model poisoning**: Attacks on AI training data
-- **Evasion techniques**: Methods to fool AI detection systems
-- **Defensive AI**: AI systems designed to counter adversarial AI
-- **Arms race**: Continuous evolution of AI attack and defense
-
-#### Autonomous Security
-- **Self-healing systems**: Security infrastructure that repairs itself
-- **Autonomous response**: AI taking action without human intervention
-- **Predictive security**: Systems that prevent attacks before they occur
-- **Adaptive defense**: Security that evolves continuously
-- **Intelligent orchestration**: AI coordinating multiple security systems
-
-### Implementation Considerations
-#### Ethical AI in Security
-- **Bias prevention**: Ensuring AI doesn't discriminate unfairly
-- **Transparency**: Making AI decisions explainable and auditable
-- **Privacy protection**: Balancing security with privacy rights
-- **Human oversight**: Maintaining human control over critical decisions
-- **Accountability**: Clear responsibility for AI actions and decisions
-
-## The Axon Shield AI Approach
-
-We help organizations implement AI-enhanced security through:
-
-- **Strategic planning**: Developing comprehensive AI security strategies
-- **Technology integration**: Implementing AI tools that enhance both prevention and detection
-- **Capability development**: Building internal AI and security expertise
-- **Process optimization**: Integrating AI into existing security operations
-- **Continuous improvement**: Ongoing optimization of AI security systems
-
-The prevention vs. detection debate isn't resolved by AI—it's evolved. AI enhances both capabilities while requiring new forms of human effort in strategy
-  - oversight
-  - and governance. Success comes from intelligently combining AI capabilities with human expertise to create adaptive
-  - effective security operations.
-
-*Original source: [Prevent v Detect: It is All About Effort
-  - I Mean AI](https://axonshield.com/prevent-v-detect-it-is-all-about-effort-i-mean-ai)*
+Axon Shield’s approach is to provide these AI-powered services as a combination of “self-hosted” deployments with centralized development of augmentation algorithms. This approach minimizes the security risks of data leaks, as the data never leaves the customers’ infrastructure, while allowing us to offer our cutting-edge expertise and deploy it through AI-powered services to customers as quickly as they desire.

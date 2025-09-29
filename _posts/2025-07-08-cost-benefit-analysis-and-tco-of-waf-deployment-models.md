@@ -13,7 +13,7 @@ tags:
 - business-case
 ---
 ![Waf Cost Analysis](/assets/images/posts/waf-economics/waf-cost-analysis.jpg)
-*Waf Cost Analysis*
+*TCO analysis of WAF deployment models - on-premise, cloud-native, and managed service*
 
 Choosing the right Web Application Firewall (WAF) deployment model isn't just a technical decision—it's a business decision with significant financial implications. Understanding the true Total Cost of Ownership (TCO) and conducting thorough cost-benefit analysis helps organizations make informed decisions that align with both security needs and business objectives.
 
