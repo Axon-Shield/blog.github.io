@@ -1,6 +1,6 @@
 ---
 title: "From Hosts.txt to Modern Internet Infrastructure"
-date: 2024-03-15T05:00:00-04:00
+date: 2025-05-24T05:00:00-04:00
 categories:
 - internet-history
 - dns
@@ -8,7 +8,6 @@ categories:
 - evolution
 tags:
 - internet-history
-- hosts-file
 - dns-evolution
 - internet-infrastructure
 ---
