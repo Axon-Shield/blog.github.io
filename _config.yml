@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.axonshield.com" # the base hostname & protocol for your site
 
 # Google Analytics
-google_analytics: G-XXXXXXXXXX  # Replace with your actual GA4 tracking ID
+google_analytics: G-D7Y27V4B1X
 
 # Build settings
 markdown: kramdown
