@@ -24,6 +24,9 @@ url: "https://blog.axonshield.com" # the base hostname & protocol for your site
 # Google Analytics
 google_analytics: G-D7Y27V4B1X
 
+# Google Tag Manager
+google_tag_manager: GTM-NKDVLH7R
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
