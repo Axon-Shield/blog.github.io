@@ -1,0 +1,25 @@
+<!-- start custom header snippets -->
+
+<!-- Custom clickable logo -->
+{% if site.logo_url %}
+<div class="site-logo">
+  <a href="{{ site.logo_url }}" target="_blank" rel="noopener noreferrer">
+    <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" class="site-logo-img">
+  </a>
+</div>
+<style>
+.site-logo {
+  display: inline-block;
+}
+.site-logo-img {
+  max-height: 60px;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+.site-logo-img:hover {
+  opacity: 0.8;
+}
+</style>
+{% endif %}
+
+<!-- end custom header snippets -->

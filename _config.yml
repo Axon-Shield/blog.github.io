@@ -11,6 +11,7 @@
 # Site settings
 title: Infrastructure Intelligence
 logo: "/assets/images/logo.png"
+logo_url: "https://axonshield.com"
 email: dan.c@axonshield.com
 description: >
   Strategic insights in operational intelligence and preventing IT
