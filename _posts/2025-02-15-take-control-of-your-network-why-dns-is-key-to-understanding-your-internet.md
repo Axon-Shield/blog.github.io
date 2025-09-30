@@ -13,274 +13,88 @@ tags:
 - network-security
 ---
 ![Dns Network Control](/assets/images/posts/network-control/dns-network-control.jpg)
-*Dns Network Control*
+*Why DNS is Key to Understand Your Networks*
 
-Most organizations treat DNS as invisible infrastructure—something that just works until it doesn't. But DNS is actually the most powerful lens for understanding your network traffic
-  - user behavior
-  - and security posture. By taking active control of your DNS infrastructure
-  - you unlock unprecedented visibility and control over your internet connectivity.
+Getting your DNS in order is the first step to taking control of your network perimeter. It will provide you with definitive information about your internet-facing services and websites. It also reveals all the third parties to whom you outsource your capabilities—from SEO and marketing to email, to hosting your applications.
 
-## DNS: Your Network's Hidden Control Center
 
-### Why DNS is the Perfect Visibility Point
-Every internet connection starts with a DNS query
-  - making DNS the universal observation point for:
-- **User activity**: Every website visit
-  - app connection
-  - and cloud service access
-- **Application behavior**: How your applications discover and connect to services
-- **Device communications**: IoT devices
-  - mobile apps
-  - and automated systems
-- **Security events**: Malware communications
-  - data exfiltration attempts
-  - and policy violations
-- **Performance issues**: Slow or failing service connections
+**DNS - Strategy for Perimeter Security**
+-----------------------------------------
 
-### The DNS Data Goldmine
-#### Traffic Patterns
-- **Popular destinations**: Which services your organization uses most
-- **Usage timing**: When different services are accessed throughout the day
-- **Geographic patterns**: Where your traffic is going globally
-- **Protocol preferences**: IPv4 vs IPv6 usage patterns
-- **Application dependencies**: How different services interconnect
+With multiple clients, we have seen immense impact of creating and maintaining up-to-date inventory of DNS data. Whether a single registered domain name, or hundreds of domains managed by different teams across the IT operations. We knew that this information is important but the impact of its availability always surprises us.
 
-#### User Behavior Insights
-- **Work patterns**: Understanding how employees use internet resources
-- **Shadow IT discovery**: Finding unauthorized cloud services and applications
-- **Productivity analysis**: Identifying time spent on different categories of sites
-- **Compliance monitoring**: Ensuring adherence to acceptable use policies
-- **Security awareness**: Identifying risky user behaviors
+Firstly, what we talk about - we talk about domains that some people still type into web browsers - like "[google.com](https://google.com)" or "[irs.gov](http://irs.gov)". DNS is a system that finds your company on the internet. The size of your "DNS" depends on who you are. If you're the US government, your DNS are all internet names ending with ".gov" - thousands of domains. As an internet company you will probably have one registered name "[mycompany.com](http://mycompany.com)" and if you acquired other businesses, you may manage tens of domains.
 
-## Taking Control: From Passive to Active DNS Management
+DNS (Domain Name System) management plays a critical role in network operations and security. Beyond translating human-friendly domain names to servers hosting your websites, DNS records can be a valuable source of intelligence for understanding network behavior, identifying security risks, and making strategic decisions to protect digital assets.
 
-### Traditional DNS Approach: Set and Forget
-Most organizations implement DNS passively:
-- **ISP DNS servers**: Using whatever DNS servers your ISP provides
-- **Basic forwarding**: Simple DNS forwarding without inspection
-- **No monitoring**: Limited visibility into DNS traffic and performance
-- **Reactive troubleshooting**: Only looking at DNS when problems occur
-- **Security blindness**: Missing opportunities for DNS-based security
+With multiple clients, we have implemented an ultimate DNS inventory, and we want to highlight some interesting aspects of our past achievements. Our process involves collecting data, understanding its value, and analyzing the results to trigger various infrastructure tasks and projects. The follow-up actions range from record removal to improvements in certificate management and its automation, as well as the implementation of protective measures such as Web Application Firewalls (WAF) and DDoS protection.
 
-### Active DNS Management: Comprehensive Control
-Taking control means implementing:
-- **Managed DNS services**: Professional DNS hosting with advanced features
-- **DNS filtering**: Blocking malicious and inappropriate content
-- **Performance optimization**: Choosing fastest DNS servers for your location
-- **Redundancy and failover**: Multiple DNS providers for reliability
-- **Comprehensive monitoring**: Real-time visibility into DNS performance and security
+Collecting DNS Data
+-------------------
 
-## Building Your DNS Control Infrastructure
+The first step is to collect as much of your DNS data as possible. Even for companies with extensive DNS management, the data is usually managed by just one or a few teams. This is due to the available technologies and even when ignoring cyber-security, you realise the importance of centralising changes to your DNS.
 
-### DNS Resolution Control
-#### Authoritative DNS Management
-- **Professional hosting**: Using reliable
-  - high-performance DNS providers
-- **Geographic optimization**: Servers located close to your users
-- **Load balancing**: Distributing traffic across multiple servers
-- **Health monitoring**: Automatic failover for unhealthy services
-- **Advanced record types**: Leveraging modern DNS features
+We can collect data with a widely support "zone transfer" mechanism but we can also directly parse configuration data of DNS systems (Bind9, Akamai Edge DNS, AWS R53, GCP DNS, etc). Some of these mechanisms require changes to your network protection and this is one of the reasons why we implement our automation in cloud accounts you control - there is no vendor lock to Axon Shield.
 
-#### Recursive DNS Strategy
-- **Custom resolvers**: Running your own DNS resolvers for control
-- **Filtering integration**: Integrating security and content filtering
-- **Caching optimization**: Optimizing cache settings for performance
-- **Logging and analytics**: Comprehensive logging of all DNS queries
-- **Policy enforcement**: Implementing organizational DNS policies
+At this point, let me quickly go through some of the information we can start reporting to you:
 
-### DNS Security Integration
-#### Threat Protection
-- **Malware domain blocking**: Preventing connections to known malicious sites
-- **Phishing protection**: Blocking fraudulent websites and domains
-- **Command and control blocking**: Disrupting malware communications
-- **Data exfiltration prevention**: Detecting and blocking DNS tunneling
-- **Zero-day protection**: Blocking newly identified threats
+1.  **Service addresses (IP addresses)** - indicate the servers running your applications. We will connect these addresses to the owners of the relevant IP ranges. This gives you insight into your platforms and third parties that you trust to provide internet-facing services for you. How do we know you trust them? They will interact with your customers while appearing to be you, as their services will use your "[mycompany.com](http://mycompany.com)" domain.
+    
+2.  **Email setup** - we can immediately identify your email servers. Additionally, we offer comprehensive instructions on implementing email protection records. This will allow you to quickly view the domains you are using for email communication. After our review, we can recommend strategies to secure your email practices, ensuring that unauthorized communications do not falsely appear to originate from your organization.
+    
+3.  **DNS Resilience** - We can measure the accessibility of your DNS data and assess its robustness. As a primary target for denial-of-service attacks, DNS is particularly vulnerable. Businesses with a longstanding online presence often fall victim to contemporary assaults that can easily overwhelm any in-house infrastructure. The expense of such distributed attacks is minimal, making them accessible even to those with limited resources.
+    
+4.  **DNS attacks** - DNS is vulnerable to hijacking through a tactic known as "cache poisoning", where adversaries substitute legitimate data with fraudulent information by rerouting customer inquiries to harmful servers. We will not only update you on your current status but also assist in implementing necessary changes using a proven framework we have successfully employed for similar adjustments.
+    
+5.  **Improper issuance of certificates** - DNS allows you to control the origin of your certificates by limiting the certificate authorities you permit. This interaction signifies an area where DNS governance intersects with certificate administration. In a future article, we will elaborate on how certificates have evolved into what can be termed a "DNS-enhanced" technology.
+    
 
-#### Policy Enforcement
-- **Content filtering**: Blocking inappropriate or non-business content
-- **Shadow IT detection**: Identifying unauthorized cloud services
-- **Compliance enforcement**: Ensuring adherence to regulatory requirements
-- **Time-based policies**: Different policies for different times of day
-- **User-specific policies**: Customized policies based on user roles
+Analyzing DNS Data
+------------------
 
-## Visibility and Analytics Framework
+Once your DNS information is stored in a database, we can begin to analyze the data and construct a comprehensive overview of your internet landscape.
 
-### Real-Time Monitoring
-#### DNS Performance Metrics
-- **Query response times**: Measuring DNS resolution speed
-- **Success rates**: Tracking failed vs. successful queries
-- **Server performance**: Monitoring individual DNS server health
-- **Geographic performance**: Understanding performance from different locations
-- **Cache efficiency**: Measuring cache hit rates and effectiveness
+The first step involves establishing a refined DNS dataset. We verify each record to ensure its accuracy and functionality. This process confirms that DNS entries are correctly directing to resources while identifying outdated or redundant records.
 
-#### Traffic Analysis
-- **Query volume patterns**: Understanding traffic patterns over time
-- **Domain popularity**: Most frequently accessed domains
-- **Record type distribution**: Usage of different DNS record types
-- **Error analysis**: Common DNS errors and their causes
-- **Anomaly detection**: Identifying unusual DNS traffic patterns
+Why does this matter? Your infrastructure changes over time as you discontinue relationships with third-party services, phase out older servers, and introduce new virtual machines. Commonly, we find DNS entries linked to non-existent servers—a better situation—or linked to servers owned by others, which poses a significant risk by creating potential vulnerabilities for impersonation.
 
-### Historical Analytics
-#### Trend Analysis
-- **Usage trends**: How DNS usage changes over time
-- **Seasonal patterns**: Understanding cyclical traffic patterns
-- **Growth planning**: Predicting future DNS capacity needs
-- **Performance trends**: Long-term performance improvement or degradation
-- **Security trends**: Evolution of threats and security events
+The automated process, which starts working the moment you are onboarded, will:
 
-#### Business Intelligence
-- **Application usage**: Understanding which business applications are used most
-- **Productivity metrics**: Analyzing productivity-related internet usage
-- **Cost optimization**: Identifying opportunities to optimize internet costs
-- **Vendor analysis**: Understanding reliance on different cloud providers
-- **Risk assessment**: Quantifying internet-related business risks
+*   **Verify Addresses**: Ensure that server addresses in your DNS accurately link to your servers and firewalls. Outdated IP addresses may signify neglected infrastructure that could be susceptible to security breaches.
+    
+*   **Consistency of DNS Aliases**: Validate that DNS alias records are correct and functional. Invalid or broken aliases can lead to service disruptions and expose vulnerabilities.
+    
+*   **Email Security**: Inadequate or erroneous email protection records enable unauthorized parties to send emails posing as you. DNS serves as a crucial source of information, allowing email servers worldwide to notify you about messages originating from your domains. Remarkably, the entire internet collects analytics regarding each email sent from your domain(s) and shares this data with you, provided your DNS is configured properly.
+    
 
-## Advanced DNS Control Techniques
+**DNS Analysis Done - Taking Action**
+-------------------------------------
 
-### Traffic Engineering
-#### Intelligent Routing
-- **Geographic routing**: Directing users to closest servers
-- **Performance-based routing**: Routing to fastest available servers
-- **Cost-based routing**: Optimizing for network costs
-- **Availability routing**: Automatic failover to healthy servers
-- **Capacity-based routing**: Load balancing based on server capacity
+After evaluating the DNS records, it's essential to take decisive action. AXON Shield will equip you with vital information and assist in orchestrating necessary modifications. Here’s a concise overview of the most impactful steps to consider in the initial phase.
 
-#### Service Optimization
-- **CDN integration**: Optimizing content delivery network usage
-- **Cloud service optimization**: Choosing optimal cloud endpoints
-- **Bandwidth management**: Influencing traffic distribution
-- **Latency reduction**: Minimizing network latency through DNS
-- **Redundancy implementation**: Ensuring service availability
+1.  **Deleting Obsolete Records**:
+    
+    *   **Identify Outdated Entries**: Records that are no longer useful can expose your network to security risks. Eliminating these records minimizes your vulnerability.
+        
+    *   **Automated Cleanup**: If your DNS inventory (and its size) justifies it, we can implement scripts that automatically remove records that meet certain criteria, such as those linking to IP addresses outside your organization. Effective change management is vital in this process.
+        
+2.  **Guarding Against Phishing Attacks**: Email attacks aimed at clients and collaborators are among the oldest tactics in cybercrime and continue to pose significant threats to your brand. Axon Shield employs a thorough procedure to first analyze your email usage and subsequently establish a whitelist of approved email sources.
+    
+3.  **Enhancing Security: Deploying WAF and DDoS Defense**: Start by reinforcing your DNS to withstand potential threats. Utilizing a reliable cloud provider ensures that any DNS assault can be absorbed, allowing your operations team to gather data for enhancing your threat model. This knowledge is crucial for optimizing resources in cybersecurity. Additional measures can include implementing WAF protection, which significantly decreases the likelihood of successful attacks on your web applications by blocking unauthorized access to APIs and customer data.
+    
 
-### Security Orchestration
-#### Automated Response
-- **Dynamic blocking**: Automatically blocking newly identified threats
-- **Policy updates**: Updating policies based on threat intelligence
-- **Incident correlation**: Correlating DNS events with other security data
-- **Automated notifications**: Alerting on security events and policy violations
-- **Response orchestration**: Coordinating DNS actions with other security tools
+**Ongoing Operations - Homerun**
+--------------------------------
 
-#### Threat Intelligence Integration
-- **External feeds**: Incorporating commercial and open source threat feeds
-- **Community sharing**: Participating in threat intelligence sharing
-- **Custom intelligence**: Developing organization-specific threat intelligence
-- **Attribution analysis**: Understanding attack attribution through DNS
-- **Predictive blocking**: Proactively blocking likely threats
+Once an automated system is up and running with a regular collection of DNS data, we will offer ongoing monitoring and timely alerts.
 
-## Implementation Roadmap
+You will have immediate access to dashboards available through the Axon Shield automation platform. However, we recognize that each customer has unique processes and inventory systems, so we facilitate the integration of data into those platforms. This approach is fundamental to our operational model and our commitment to customer support.
 
-### Phase 1: Foundation Building (Weeks 1-4)
-#### Infrastructure Setup
-- **DNS provider selection**: Choosing reliable
-  - feature-rich DNS providers
-- **Resolver deployment**: Implementing controlled DNS resolvers
-- **Basic monitoring**: Setting up fundamental DNS monitoring
-- **Policy framework**: Establishing basic DNS policies
-- **Documentation**: Creating comprehensive documentation
+Our aim is to minimize the need for ad-hoc automation and configuration projects that demand specialized expertise. Once this foundation is established, you can concentrate on what truly matters—responding to incidents effectively and mitigating them, either through proactive measures or prompt incident management.
 
-#### Initial Analytics
-- **Baseline establishment**: Understanding current DNS usage patterns
-- **Performance measurement**: Measuring current DNS performance
-- **Security assessment**: Identifying current security gaps
-- **Usage analysis**: Understanding how DNS is currently used
-- **Risk identification**: Identifying DNS-related risks
+**Conclusion**
+--------------
 
-### Phase 2: Enhanced Control (Weeks 5-12)
-#### Advanced Features
-- **Security filtering**: Implementing comprehensive DNS security
-- **Performance optimization**: Optimizing DNS for speed and reliability
-- **Policy refinement**: Developing sophisticated DNS policies
-- **Integration**: Connecting DNS with other security and monitoring tools
-- **Automation**: Implementing automated DNS management
+DNS data extends beyond merely linking domain names to servers; it plays a crucial role in an effective security framework. By gathering, resolving, and scrutinizing DNS records, you can make informed choices to eliminate obsolete records, strengthen your security defenses, and actively safeguard your applications through Web Application Firewalls (WAF) and DDoS mitigation solutions.
 
-#### Deep Analytics
-- **Historical analysis**: Analyzing trends and patterns over time
-- **Business intelligence**: Connecting DNS data to business insights
-- **Security analytics**: Advanced analysis of security events
-- **Performance optimization**: Continuously improving DNS performance
-- **Predictive analysis**: Using data to predict future needs
-
-### Phase 3: Advanced Orchestration (Weeks 13-24)
-#### Intelligent Automation
-- **Machine learning**: Using AI for DNS optimization and security
-- **Predictive blocking**: Proactively blocking threats
-- **Dynamic optimization**: Automatically optimizing performance
-- **Self-healing**: Automatic detection and resolution of issues
-- **Continuous improvement**: Ongoing enhancement based on data
-
-#### Strategic Integration
-- **Business alignment**: Aligning DNS strategy with business goals
-- **Risk management**: Integrating DNS into enterprise risk management
-- **Compliance integration**: Ensuring DNS supports compliance requirements
-- **Innovation enablement**: Using DNS to enable new business capabilities
-- **Competitive advantage**: Leveraging DNS for business advantage
-
-## Measuring Success
-
-### Technical Metrics
-- **Performance improvements**: Faster DNS resolution times
-- **Reliability gains**: Reduced DNS-related outages and issues
-- **Security enhancement**: Fewer successful attacks through DNS
-- **Visibility increase**: Better understanding of network traffic
-- **Control effectiveness**: Successful policy enforcement
-
-### Business Value
-- **Risk reduction**: Lower exposure to DNS-related risks
-- **Cost optimization**: Better utilization of internet resources
-- **Productivity gains**: Reduced time lost to DNS-related issues
-- **Compliance achievement**: Meeting regulatory requirements
-- **Innovation enablement**: Supporting new business initiatives
-
-## Tools and Technologies
-
-### DNS Management Platforms
-- **Cloud DNS services**: Route 53
-  - CloudDNS
-  - Azure DNS
-- **Enterprise DNS platforms**: Infoblox
-  - BlueCat
-  - EfficientIP
-- **Security-focused DNS**: Umbrella
-  - Quad9
-  - CleanBrowsing
-- **Open source solutions**: PowerDNS
-  - Knot DNS
-  - Unbound
-- **Hybrid approaches**: Combining multiple platforms
-
-### Analytics and Monitoring
-- **DNS analytics platforms**: Specialized DNS analysis tools
-- **SIEM integration**: Incorporating DNS data into security operations
-- **Network monitoring**: Including DNS in network performance monitoring
-- **Business intelligence**: Using DNS data for business insights
-- **Custom dashboards**: Building tailored DNS visibility interfaces
-
-## Common Pitfalls and Solutions
-
-### Technical Challenges
-- **Performance impact**: Ensuring DNS control doesn't slow network performance
-- **Reliability concerns**: Maintaining high availability during DNS changes
-- **Complex integration**: Successfully integrating with existing infrastructure
-- **Scale management**: Handling DNS at enterprise scale
-- **Security balance**: Balancing security with usability
-
-### Organizational Challenges
-- **Change resistance**: Overcoming resistance to DNS changes
-- **Skills gap**: Building internal DNS expertise
-- **Resource allocation**: Securing appropriate resources for DNS projects
-- **Cross-team coordination**: Aligning multiple teams around DNS strategy
-- **Executive buy-in**: Demonstrating business value of DNS control
-
-## The Axon Shield Approach
-
-We help organizations take control of their DNS infrastructure through:
-
-- **Comprehensive assessment**: Understanding current DNS usage and opportunities
-- **Strategic planning**: Developing DNS strategies aligned with business goals
-- **Implementation guidance**: Supporting the deployment of DNS control infrastructure
-- **Analytics and insights**: Providing deep analysis of DNS data for business value
-- **Ongoing optimization**: Continuously improving DNS performance and security
-
-Taking control of your DNS infrastructure is one of the most impactful steps you can take to understand and secure your internet connectivity. DNS isn't just infrastructure—it's your window into understanding how your organization uses the internet and your primary control point for managing that usage.
-
-*Original source: [Take Control of Your Network: Why DNS is Key to Understanding Your Internet](https://axonshield.com/take-control-of-your-network-why-dns-is-key-to-understanding-your-internet)*
+DNS management is an ongoing process. Continuous surveillance and strategic actions driven by data insights guarantee that your digital assets remain secure and perform at their best.

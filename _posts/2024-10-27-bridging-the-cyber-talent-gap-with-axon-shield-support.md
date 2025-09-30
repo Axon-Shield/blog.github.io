@@ -1,6 +1,6 @@
 ---
 title: "Bridging the Cyber Talent Gap with Axon Shield Support"
-date: 2024-11-16T05:00:00-04:00
+date: 2024-10-27T05:00:00-04:00
 categories:
 - cybersecurity
 - talent
