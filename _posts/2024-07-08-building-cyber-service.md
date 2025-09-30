@@ -1,5 +1,5 @@
 ---
-title: "Building Cyber Service: Creating Effective Security Operations"
+title: "Building Infosec Service: Creating Effective Security Operations"
 date: 2024-07-08T05:00:00-04:00
 categories:
 - cybersecurity
@@ -11,127 +11,57 @@ tags:
 - service-delivery
 - SOC
 ---
-![Building Cyber Service](/assets/images/posts/cyber-service/building-cyber-service.jpg)
-*Building Cyber Service*
+![Building Infosec Service](/assets/images/posts/cyber-service/building-cyber-service.jpg)
+*Building Infosec Service - why end-to-end ownership is key*
 
-Building an effective cyber service requires more than just deploying security tools. It demands a comprehensive approach to service design
-  - delivery
-  - and continuous improvement that treats cybersecurity as a critical business service.
+Building a successful service within an enterprise mirrors the challenges of establishing a new company, with one significant difference: there's no need to attract customers. The result? Complacency in service design and execution. The answer is end-to-end ownership. Using resources in the right way and make sure decisions are made by people who understand how the new service will be used.
 
-## Understanding Cyber Service
+Building a service within an enterprise is not significantly different from building a new company. The main difference is that you don’t need to acquire customers. What I mean is that if you mess it up, the service will still exist and be used, and its manager can create weekly PowerPoint reports. People who depend on it may not like it but will use it, as there is no alternative.This lack of need for customer validation is also the main problem. People in management positions can't or don't know how to build a service because they never had to compete with alternatives. Something inevitable in "open market".
 
-Cyber service encompasses the complete lifecycle of security service delivery:
+There are two main parts of a service life cycle: design and build, and use. In the enterprise world, you would refer to it as “change” versus “operations.” Different teams and individuals execute and are involved in each of these two phases.
 
-- **Service design**: Architecting security capabilities that meet business needs
-- **Service delivery**: Operational execution of security processes and controls
-- **Service management**: Ongoing optimization and improvement of security operations
-- **Service integration**: Seamless embedding into broader business operations
+If you want to change something, such as building a new service, you obtain funding for the project, gather resources, and assemble a team to create the new offering. Once it is complete, you need to hand it over to an operations team. The issue is that the project—this change—often focuses solely on technology. The service aspect is frequently considered out of scope and overlooked or ignored until the point when this new service should be utilized.
 
-## Core Components of Cyber Service
+When the time comes, the operations team tries to determine how to use it and how to derive value from it. If it’s a customer-facing service—unless it presents a completely new proposition to customers—it will simply be “plugged” into an existing app. Whether customers use it or not is not measured; there are no pre-defined criteria to indicate whether the new “service” was worthwhile or what the ROI is.
 
-### 1. Service Strategy
-- **Business alignment**: Understanding and supporting business objectives
-- **Risk management**: Identifying and addressing security risks systematically
-- **Resource planning**: Optimizing human and technology resources
-- **Performance targets**: Establishing measurable service level objectives
+If it’s internal service, it becomes even more complicated because, unless you have a strong service management and production team that knows how to proceed, the effort put into “implementing the service model” is much harder to measure, as no one knows what the criteria should be. Even though placing any piece of technology into a proper service context accounts for 80-90% of the effort measured by the number of people involved and the time needed, obtaining the most value from a new technology through its service model requires company-wide communication. This includes working with other operational teams within the enterprise and reaching out to teams or executive officers in teams that are supposed to use it.
 
-### 2. Service Design
-- **Architecture planning**: Designing scalable and resilient security infrastructure
-- **Process definition**: Creating standardized operational procedures
-- **Technology selection**: Choosing appropriate tools and platforms
-- **Integration planning**: Ensuring seamless service interconnections
+If we focus on building cybersecurity services, the situation is even worse. The first hurdle is getting the intended operations team to understand the technology in the first place. When you reach the point where service requirements should start shaping the technology, there is a significant gap in understanding and knowledge. This can lead to various negative outcomes. Either the technology is altered to such an extent that it creates security and functional problems, or the service model fails to account for technological requirements, resulting in a poor user experience and diminished value of the service overall.
 
-### 3. Service Transition
-- **Implementation planning**: Structured rollout of security services
-- **Change management**: Managing transitions with minimal business disruption
-- **Testing and validation**: Ensuring services meet design requirements
-- **Knowledge transfer**: Training teams on new processes and technologies
+Is there a way out of this? Of course, but not many enterprises can work it out internally, as it requires a significant change in culture—reinforcing ownership. One of the most famous examples is linked to people from what’s called the PayPal Mafia. When you look at the beginnings of PayPal, its structure was geared toward the quick implementation of new ideas; there are books and countless articles about how the company was internally structured and managed. PayPal had a very agile and competent model that was able to deliver results. At the core of that model was ownership. One person was in charge of a project from the inception of an idea through delivery to operationalization—making it a successful part of the company’s portfolio or improving internal processes. This feeling and culture of responsibility and ownership is something that has weakened, at least in large UK companies.
 
-### 4. Service Operation
-- **Incident management**: Rapid response to security events and incidents
-- **Problem management**: Root cause analysis and permanent fixes
-- **Monitoring and alerting**: Continuous oversight of security posture
-- **Service desk**: Front-line support for security-related requests
+I’ve experienced two reasons for this. One is technological, wherein technical teams are outsourced overseas. The assumption is that the enterprise will save a significant amount of money. The downside is that it—somewhat unexpectedly—loses in-house technology expertise. Thus, what you may be left with is middle-tier management that is suddenly expected to take ownership of a service, including the technology, which is something they neither want nor are able to take on. The accountability and responsibility in these circumstances are challenging because it implies understanding how your service works, how to detect problems, and how to fix them. You need to establish metrics to comprehend how your service operates, but very few of these individuals understand how to do that unless they were heavily involved in the service build. It really is like running a mini startup company within the enterprise. The service needs to be managed and requires continuous assessment of risks and performance so that improvement ideas can be integrated into a roadmap and budgets. Interestingly, the cost of most improvements is not significant; there is often no capital expenditure and a limited cost for improving procedures (SOPs), processes, etc. However, this requires knowledge, interest, and people who actively think about their service every day. They need to keep communicating with users, considering issues, incidents, and problems they encounter, and capturing all that information in a form that is easy to access, sort, and use for future planning.
 
-## Building Effective Security Operations
+And that brings me back to my initial point. I believe that enterprises - even strong technology enterprises - struggle to make cyber security work, to bring the bang for the buck. The main reason is the ability to combine two challenging aspects: fully owning internal functions with cyber and/or IT teams, and simultaneously understanding the strengths and limitations of third-party SaaS services and how to integrate them into their operating teams’ daily tasks.
 
-### People and Skills
-- **Team structure**: Organizing security teams for optimal coverage and expertise
-- **Skill development**: Continuous training and capability enhancement
-- **Role definition**: Clear responsibilities and accountability frameworks
-- **Career progression**: Growth paths for security professionals
+One of the main features of security is that it's fairly easy to put all the structural requirements in with a proper design. But it's very hard to change existing applications and services once they are up and running and generating revenue. When there is any downtime or risk to operations, the application owner will have questions that need to be addressed by the cybersecurity teams. However, what is even harder is explaining these issues in a manner that the application owner can easily understand, including the risks involved and how they are mitigated and managed.
 
-### Process Optimization
-- **Standardization**: Consistent approaches to common security tasks
-- **Automation**: Reducing manual effort through intelligent automation
-- **Documentation**: Comprehensive procedures and knowledge bases
-- **Continuous improvement**: Regular process review and enhancement
+With all that said, if you add to the picture an external regulation that needs to be understood not only by the technology teams but also by the compliance and legal teams, you need firm foundations on which to build your decisions, manage risks, and understand your threat landscape.
 
-### Technology Integration
-- **Tool consolidation**: Reducing complexity through platform integration
-- **Data correlation**: Comprehensive security information and event management
-- **Response automation**: Automated incident response and remediation
-- **Threat intelligence**: Incorporating external threat data into operations
+There is no lack of consultants who will help their clients with security evaluations. Educating clients how to interpret those external regulations is much less common - mostly because of the liability for potential sanctions. As a result, there is vacuum filled with the good old FUD - fear, uncertainty, doubt - which causes knee jerk reactions to somehow remove perceived risk of non-compliance "now", without thinking about mid or long-term effects - in the cost, resources, and ... compliance.
 
-## Service Delivery Models
+**Optimism v Reality**
 
-### Internal SOC
-- **Full control**: Complete oversight of security operations
-- **Deep integration**: Intimate knowledge of business operations
-- **Resource intensity**: Significant investment in people and technology
-- **Scalability challenges**: Difficulty scaling with business growth
+The reason I have become skeptical about any cybersecurity measures providing value to the company is the deteriorating in-house expertise regarding technology, the understanding of internal IT systems, and the disappearance of ownership. The latter is to some degree a result of the former.
 
-### Managed Security Services
-- **Expert capability**: Access to specialized security expertise
-- **Cost efficiency**: Shared resource model reduces individual costs
-- **24/7 coverage**: Round-the-clock security monitoring and response
-- **Limited customization**: Standardized service offerings
+People who have no knowledge of technology or how to operate it exist. Enterprises lack the talent that used to be embedded in internal technology teams. There is a need for the ability to consider the operating model at the time of design. It is important to extend the understanding of IT to include its impact on operations. We must learn how to optimize operations through automation and how to manage the handover of relevant aspects of a particular functionality to different teams, while keeping oversight within the team that built the entire complex system.
 
-### Hybrid Models
-- **Flexible approach**: Combining internal and external capabilities
-- **Selective outsourcing**: Outsourcing specific functions while retaining core capabilities
-- **Scalable growth**: Ability to scale services based on business needs
-- **Risk distribution**: Shared responsibility model
+I have seen many instances where a new project was delivered and handed over, and it worked. However, I could easily see how it created another technological debt regarding long-term operation and maintenance—issues that you will not notice until 12, 24, or 36 months later.
 
-## Measuring Cyber Service Effectiveness
+So, do you want cybersecurity to become a part of your company's value proposition? There is no way, unless you get this whole process from inception to implementation, rollout, and maintenance under control of one team with one clear vision. If you start slicing and dicing the life cycle, you will end up with something that barely works, is limited in duration, and becomes a hidden bomb.
 
-### Operational Metrics
-- **Mean time to detection (MTTD)**: How quickly threats are identified
-- **Mean time to response (MTTR)**: How quickly incidents are addressed
-- **False positive rates**: Accuracy of security alerting systems
-- **Service availability**: Uptime of critical security services
+If ownership is defined at the beginning, you can avoid substantial support costs, where you, as the owner of a service, have to deal with problems created by gaps in the documentation, vague SOPs that result in incorrect use, and missing maintenance requirements. Any of these issues could potentially become significant cost or risk items, or both.
 
-### Business Metrics
-- **Business continuity**: Minimal disruption from security incidents
-- **Compliance adherence**: Meeting regulatory and policy requirements
-- **Cost optimization**: Efficient use of security resources
-- **Stakeholder satisfaction**: User and business satisfaction with security services
+So, is there a way to still build secure infrastructure technology and allow your enterprise to benefit from it? Yes, but you need to find and empower strong individuals who are capable of delivering from start to finish.. If I pick some particular aspects I've come across recently - as examples, the first one is around the technology design. Use architects as a resource, not as decision-makers; they do not have an understanding of services, operations, or the technology life cycle.
 
-## Continuous Improvement Framework
+Start any new project by learning about the problem, how it impacts different teams, and what the limitations and costs are. After all, all you want to build is something that is easier to use and that makes people’s lives better. If it's not the case, they will just keep doing things the old way, their objectives are to get things done. Architects can help you draw diagrams and write descriptions, but always test their suggestions with small demonstrations. PaaS platforms are so advanced these days that you can create demonstrations in a matter of minutes or hours and show where the architects made mistakes.
 
-### Regular Assessment
-- **Service reviews**: Periodic evaluation of service performance
-- **Gap analysis**: Identifying areas for improvement
-- **Benchmark comparison**: Measuring against industry standards
-- **Stakeholder feedback**: Incorporating user and business input
+Split the delivery into phases and start with the core functionality - just like any start-up does. Once you have built the first version, show potential users how to use it, talk to them, work out difficult bits and adjust your delivery plan. Start building an easy-to-find, library of usage examples. Ideally go to the point where users that can not only read but copy&paste configuration/integration code. Remember:
 
-### Innovation Integration
-- **Technology evaluation**: Assessing new security technologies
-- **Process enhancement**: Improving operational procedures
-- **Skill development**: Enhancing team capabilities
-- **Service expansion**: Adding new security capabilities
+**_Users are NOT interested in the beauty of your IT service, they just want to know how to use it._**
 
-## The Axon Shield Approach
+This library of user manuals, copy-and-paste examples, and pointers to IM channels, where users can ask questions and get answers in a couple of minutes, has a massive impact on the long-term efficiency and cost of your service.
 
-We help organizations build effective cyber services through:
+It also builds toward a centralized, fast, and efficient incident response. Things break; incidents will occur that require fixing. Especially for automations, the whole point of defining and establishing a service is to solve problems, not to produce weekly PowerPoint decks.
 
-- **Service design consulting**: Architecting security operations that fit your business
-- **Implementation support**: Guiding the deployment of new security services
-- **Operational optimization**: Enhancing existing security operations
-- **Continuous improvement**: Ongoing service enhancement and maturity development
-
-Building effective cyber service is about creating a sustainable
-  - scalable
-  - and business-aligned approach to cybersecurity that evolves with your organization's needs.
-
-*Original source: [Building Cyber Service: Creating Effective Security Operations](https://axonshield.com/building-cyber-service)*
+The more complicated the technology is, the more expensive it is to train the support staff. Ownership is key. If you don’t have centralized functions that can quickly react to and fix problems that were not addressed during the initial design, you’ll encounter significant issues.
