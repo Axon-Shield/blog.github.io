@@ -29,3 +29,4 @@ we-forget-that-cyber-defense-is-hard-apologies
 prevent-v-detect-it-is-all-about-effort-i-mean-ai
 cost-benefit-analysis-and-tco-of-waf-deployment-models
 akamai-and-security-operations
+the-hidden-foundation-of-digital-trust-why-trust-stores-matter-to-your-bottom-line
