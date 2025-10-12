@@ -1,7 +1,20 @@
 <!-- start custom header snippets -->
 
-<!-- Custom clickable logo -->
+<!-- Custom clickable logo - Override theme default -->
 {% if site.logo_url %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Override any existing logo links
+  const logoLinks = document.querySelectorAll('a[href*="logo"], .site-logo a, .masthead__inner-wrap a');
+  logoLinks.forEach(function(link) {
+    if (link.querySelector('img')) {
+      link.href = '{{ site.logo_url }}';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+  });
+});
+</script>
 <div class="site-logo">
   <a href="{{ site.logo_url }}" target="_blank" rel="noopener noreferrer">
     <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" class="site-logo-img">
