@@ -12,7 +12,7 @@ tags:
   - Security Operations
   - Enterprise Architecture
 ---
-![The Store - Trust Display](/assets/images/posts/trust-store-foundation/the-store-trust-display.jpg)
+![The Store - Trust Display](/assets/images/posts/trust-store-foundation/the-store-trust-display.png)
 *Just as a physical store displays what it trusts to customers, your digital infrastructure maintains trust stores that determine which authorities are recognized*
 
 When your organization experiences a service outage at 22:51 PM due to a suspected expired certificate, the incident team follows the “usual” playbook to perform an emergency renewal of the expired certificate. However, this time, it does not resolve the problem—the downtime continues. In fact, the incident team is receiving new alerts of downtimes from seemingly unrelated services. The incident is escalated to the CEO. It impacts customers and it needs to be resolved before customers wake up. Twenty-four hours later - several public announcements, dozens of engineers diverted from their planned work - the most critical services are up and running again, and there is a recovery plan in place (at least an outline of it) covering the next four weeks.
