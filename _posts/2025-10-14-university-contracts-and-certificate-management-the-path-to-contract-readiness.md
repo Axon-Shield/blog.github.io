@@ -15,7 +15,7 @@ tags:
   - Infrastructure Management
 ---
 
-![The Store - Trust Display](/assets/images/posts/university-contracts-and-certs/1760026110484.jpeg)
+![University Contracts and Certs](/assets/images/posts/university-contracts-and-certs/1760026110484.jpeg)
 *Startups that master certificate management demonstrate the operational maturity universities require for contract readiness.*
 
 University contracts represent a massive opportunity for startups. These deals often provide multi-year revenue streams and access to thousands of users who can validate your product at scale. Universities are typically more willing to work with innovative startups, especially when these innovations relate to student retention, compared to government agencies or large corporations, making them an ideal middle ground for companies seeking institutional contracts.
