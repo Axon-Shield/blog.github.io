@@ -32,7 +32,8 @@
           <li>
             <a href="{{ link.url }}" rel="nofollow noopener noreferrer me" itemprop="sameAs" style="{% if link.image %}display: flex; flex-direction: column; align-items: center; text-align: center;{% endif %}">
               {% if link.image %}
-                <img src="{{ link.image }}" alt="{{ link.label }}" style="width: 80%; height: auto;">
+                <img src="{{ link.image }}" alt="{{ link.label }}" style="width: 80%; height: auto; margin-bottom: 0.5em;">
+                <span class="label" style="font-size: 0.85em;">{{ link.url }}</span>
               {% elsif link.icon %}
                 <i class="{{ link.icon }}" aria-hidden="true"></i>
                 <span class="label">{{ link.label }}</span>
