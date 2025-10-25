@@ -1,0 +1,46 @@
+{% assign author = page.author | default: page.authors[0] | default: site.author %}
+{% assign author = site.data.authors[author] | default: author %}
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  {% if author.avatar %}
+    <div class="author__avatar">
+      {% if author.avatar contains "://" %}
+        {% assign author_avatar = author.avatar %}
+      {% else %}
+        {% assign author_avatar = author.avatar | relative_url %}
+      {% endif %}
+
+      <img src="{{ author_avatar }}" alt="{{ author.name }}" itemprop="image">
+    </div>
+  {% endif %}
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">{{ author.name }}</h3>
+    {% if author.bio %}
+      <div class="author__bio" itemprop="description">
+        {{ author.bio | markdownify }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">{{ site.data.ui-text[site.locale].follow_label | default: "Follow" }}</button>
+    <ul class="author__urls social-icons">
+      {% if author.links %}
+        {% for link in author.links %}
+          <li>
+            <a href="{{ link.url }}" rel="nofollow noopener noreferrer me" itemprop="sameAs" style="{% if link.image %}display: flex; flex-direction: column; align-items: center; text-align: center;{% endif %}">
+              {% if link.image %}
+                <img src="{{ link.image }}" alt="{{ link.label }}" style="width: 80%; height: auto;">
+              {% elsif link.icon %}
+                <i class="{{ link.icon }}" aria-hidden="true"></i>
+                <span class="label">{{ link.label }}</span>
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+</div>
