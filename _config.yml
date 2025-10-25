@@ -67,7 +67,7 @@ feed:
 author:
   name   : "Dan Cvrcek"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Dan [Tsvrcheck] delivered secret and certificate services for Comcast. He focuses on operational intelligence that wins
+  bio    : "Dan [Tsvrcheck] is a left-handed contrarian living by JFDI. He delivered secret and certificate services for Comcast. He focuses on operational intelligence that wins
    enterprise contracts. With a professorship from Czech Republic and Cambridge University post-doctoral research, Dan built
    PKI, DNS and encryption systems for Sky, TSB Bank, Deutsche Bank, or Barclays. Combining startup agility with enterprise experience, 
    he delivers infrastructure intelligence that makes real difference."
@@ -76,7 +76,6 @@ author:
       image: "/assets/images/posts/15-million-line-item/book-cover-3.png"
       url: "https://www.amazon.com/dp/B0FX144F9R"
     - label: "Axon Shield"
-      icon: "fas fa-fw fa-link"
       image: "/assets/images/logo.png"
       url: "https://axonshield.com"
 
