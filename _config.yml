@@ -76,7 +76,7 @@ author:
       icon: "fas fa-fw fa-link"
       url: "https://axonshield.com"
     - label: "$15 Million Line Item<br>That Doesn't Exist<br><small>Amazon Kindle and paperback</small>"
-      icon: "fas fa-fw fa-book"
+      image: "/assets/images/posts/15-million-line-item/book-cover-3.png"
       url: "https://www.amazon.com/dp/B0FX144F9R"
 
 defaults:
