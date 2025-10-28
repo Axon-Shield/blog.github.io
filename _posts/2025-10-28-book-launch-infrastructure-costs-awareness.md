@@ -17,7 +17,7 @@ tags:
   - Financial Impact
 ---
 
-![Book Launch: Infrastructure Costs](/assets/images/posts/book-launch-infrastructure-costs/book-launch.jpg)
+![Book Launch: Infrastructure Costs](/assets/images/posts/book-launch-infrastructure-costs/1761580852773.jpeg)
 *The recent launch of "$15M Line Item That Doesn't Exist" reveals a clear need for better understanding of certificate management's financial impact.*
 
 The recent publication of my book "$15M Line Item That Doesn't Exist" on Amazon has been off to a great start with over 50 downloads globally in just a few days after release. The feedback in the reviews has been highly specific, highlighting a clear need for better understanding of certificate management's financial impact.
@@ -37,3 +37,5 @@ The financial case is straightforward once invisible costs become visible. Organ
 This applies broadly because every organization managing digital infrastructure faces these costs. The difference lies in visibility. Enterprises with dedicated teams can absorb inefficiency temporarily. Startups competing for institutional contracts cannot.
 
 The book is available now on Amazon. Whether you're an early-stage founder building your first architecture or a growth-stage CEO wondering why deals keep stalling in procurement, understanding infrastructure costs transforms how you compete.
+
+**Available now on [Amazon US](https://www.amazon.com/dp/B0FX144F9R) and [Amazon UK](https://www.amazon.co.uk/dp/B0FX144F9R).**
