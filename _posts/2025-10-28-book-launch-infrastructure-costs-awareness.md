@@ -38,4 +38,4 @@ This applies broadly because every organization managing digital infrastructure 
 
 The book is available now on Amazon. Whether you're an early-stage founder building your first architecture or a growth-stage CEO wondering why deals keep stalling in procurement, understanding infrastructure costs transforms how you compete.
 
-**Available now on [Amazon US](https://www.amazon.com/dp/B0FX144F9R) and [Amazon UK](https://www.amazon.co.uk/dp/B0FX144F9R).**
+**Available now on [Amazon US](https://www.amazon.com/dp/B0FX144F9R?utm_source=blog&utm_medium=post&utm_campaign=book_launch&utm_content=oct28_post) and [Amazon UK](https://www.amazon.co.uk/dp/B0FX144F9R?utm_source=blog&utm_medium=post&utm_campaign=book_launch&utm_content=oct28_post).**

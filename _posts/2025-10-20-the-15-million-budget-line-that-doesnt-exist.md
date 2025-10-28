@@ -19,7 +19,7 @@ tags:
 ![The 15 Million Budget Line](/assets/images/posts/15-million-line-item/book-cover-3.png)
 *The financial black hole of certificate management operates as an untraceable expense which most business organizations fail to detect.*
 
-**Available now on [Amazon US](https://www.amazon.com/dp/B0FX144F9R) and [Amazon UK](https://www.amazon.co.uk/dp/B0FX144F9R).**
+**Available now on [Amazon US](https://www.amazon.com/dp/B0FX144F9R?utm_source=blog&utm_medium=post&utm_campaign=book_announcement&utm_content=oct20_post) and [Amazon UK](https://www.amazon.co.uk/dp/B0FX144F9R?utm_source=blog&utm_medium=post&utm_campaign=book_announcement&utm_content=oct20_post).**
 
 
 Your CFO examines quarterly spending reports which show cloud expenses increased by 12% and software licensing costs rose by 8% and contractor expenses grew by 15%. All financial data receives proper tracking and optimization. Or does it?
@@ -60,4 +60,4 @@ The costs of certificate management remain invisible to budget reports although 
 
 The main issue is not whether automated systems generate financial benefits. Organizations must determine if they can sustain the rising expenses and decreased productivity and lost business potential that result from maintaining manual operations.
 
-Available now on [Amazon US](https://www.amazon.com/dp/B0FX144F9R) and [Amazon UK](https://www.amazon.co.uk/dp/B0FX144F9R).
+Available now on [Amazon US](https://www.amazon.com/dp/B0FX144F9R?utm_source=blog&utm_medium=post&utm_campaign=book_announcement&utm_content=oct20_post_footer) and [Amazon UK](https://www.amazon.co.uk/dp/B0FX144F9R?utm_source=blog&utm_medium=post&utm_campaign=book_announcement&utm_content=oct20_post_footer).
