@@ -74,9 +74,8 @@ author:
   links:
     - label: "$15 Million Line Item<br>That Doesn't Exist<br><small>Amazon Kindle and paperback</small>"
       image: "/assets/images/posts/15-million-line-item/book-cover-3.png"
-      url: "https://www.amazon.com/dp/B0FX144F9R"
-    - label: "Axon Shield"
-      image: "/assets/images/logo.png"
+      url: "https://www.amazon.com/dp/B0FX144F9R?utm_source=blog&utm_medium=sidebar&utm_campaign=book_profile&utm_content=author_links"
+    - image: "/assets/images/logo.png"
       url: "https://axonshield.com"
 
 defaults:
