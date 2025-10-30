@@ -16,7 +16,7 @@ tags:
   - University Partnerships
 ---
 
-![Student FinTech Deals](/assets/images/posts/student-fintech-deals/student-fintech.jpg)
+![Student FinTech Deals](/assets/images/posts/student-fintech-deals/1761839620730.jpeg)
 *The student FinTech opportunity is compelling, but certificate management challenges kill deals in final procurement rounds.*
 
 The student FinTech opportunity is one of the most compelling markets I've seen in years. Students are struggling financially, universities are actively seeking solutions, and the need is urgent. Yet promising startups keep losing deals in final procurement rounds—not because their product isn't good enough, but because of something most founders don't even know matters: certificate management.
