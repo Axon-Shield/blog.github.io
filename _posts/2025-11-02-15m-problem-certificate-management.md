@@ -18,7 +18,7 @@ tags:
   - Operational Excellence
 ---
 
-![The $15M Problem in Certificate Management](/assets/images/posts/15m-problem-certificate/certificate-problem.jpg)
+![The $15M Problem in Certificate Management](/assets/images/posts/15m-problem-certificate/new-intelligence.png)
 *Three organizations, three different failures, one universal truth: automation reveals what manual processes hide.*
 
 Three organizations, three completely different approaches to PKI, one universal truth. When I started, no one really understood the infrastructure and which critical systems use certificates and which do not.
