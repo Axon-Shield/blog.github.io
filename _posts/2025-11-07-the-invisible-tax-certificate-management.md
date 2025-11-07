@@ -17,7 +17,7 @@ tags:
 ---
 
 ![The Invisible Tax of Certificate Management](/assets/images/posts/the-invisible-tax/soc_to_compliance.png)
-*Three organizations, three different failures, one universal truth: automation reveals what manual processes hide.*
+*FinTech startups are invisibly burning millions in engineering time on certificate management—here's how to make the hidden costs visible.*
 
 Most FinTech CTOs believe their infrastructure is “handled.”The annual certificate services budget in Finance amounts to $350K. Engineering seems to be active but it is productive. Everything appears to be in order.
 
