@@ -4,13 +4,24 @@ author_profile: true
 ---
 
 
+Technology vendors lose contracts they should win.
 
-It took me 20 years to realise that what I've been delivering to clients could have had a massive impact if presented for what it was - Infrastructure Intelligence.
+Not because their infrastructure fails. Because they can't prove it won't.
 
-**Infrastructure Intelligence** provides strategic and practical insights for proving vendor operational competence and winning contracts. Led by Axon Shield CEO Dan Cvrcek, we explore how systematic infrastructure intelligence differentiates your organization from competitors who suffer from operational amnesia. 
+Procurement committees ask: "How do you prevent your infrastructure from melting?" Most vendors answer with tools and promises. Sophisticated vendors answer with systematic operational intelligence—documented processes, trend data, and institutional knowledge that proves competence.
 
-Our approach is simple - automate, formalise, understand your daily operations to build knowledge for your current and future employees. DNS and certificates are aspects that need daily attention and most common reasons why we have to 'touch' production systems these days. Yes, we do have the technology, but what is really important for us is how to improve your teams and results.
+That's Infrastructure Intelligence.
 
-For technology vendors, MSPs, and service providers competing for university, healthcare, fintech, or enterprise contact in general—discover the frameworks that transform certificate management into competitive advantage and operational proof that procurement committees can't ignore.
+## What makes it work:
+Most organizations run infrastructure reactively—fix problems, move on, forget the details. Infrastructure Intelligence means systematizing your daily operations (DNS changes, certificate renewals, WAF management) to build knowledge that outlives individual engineers and proves operational maturity to procurement committees.
 
-*Where operational intelligence wins contracts.*
+## Who this is for:
+Technology vendors, MSPs, and service providers competing for university, healthcare, fintech, or enterprise contracts where operational competence is questioned during procurement.
+
+## What you get:
+Frameworks that transform routine infrastructure work into competitive advantage. When competitors scramble to answer "how do you prevent outages?", you present trend data, documented processes, and systematic capability that procurement committees can't ignore.
+
+**Led by Dan Cvrcek** - 20+ years transforming certificate, DNS, and WAF chaos into procurement advantage for Barclays, Sky UK, TSB Bank, Deutsche Bank, and Comcast.
+
+
+Want to talk? - [Dan Cvrcek @ LinkedIn](https://linkedin.com/in/dancvrcek)
