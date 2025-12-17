@@ -19,7 +19,7 @@ description: >
   universities,fintech). Led by Dan Cvrcek,
   exploring how systematic infrastructure management protects student success
   and institutional mission.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog-dan.pages.dev" # the base hostname & protocol for your site
 
 # Google Analytics
