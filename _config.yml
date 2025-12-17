@@ -20,7 +20,7 @@ description: >
   exploring how systematic infrastructure management protects student success
   and institutional mission.
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://dan.axonshield.com" # the base hostname & protocol for your site
+url: "https://blog-dan.pages.dev" # the base hostname & protocol for your site
 
 # Google Analytics
 google_analytics: G-D7Y27V4B1X
