@@ -6,3 +6,11 @@ main:
     url: https://axonshield.com/vault/
   - title: "Books"
     url: https://axonshield.com/book
+
+sidebar:
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Calendar"
+    url: /year-archive/

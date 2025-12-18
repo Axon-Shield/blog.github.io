@@ -65,12 +65,15 @@ feed:
   excerpt_only: false
 
 author:
-  name   : "Dan Cvrcek"
+  name   : "[Dan Cvrcek](https://linkedin.com/in/dancvrcek) [Tsvrcheck]"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Dan [Tsvrcheck] is a left-handed contrarian living by JFDI. He delivered secret and certificate services for Comcast. He focuses on operational intelligence that wins
-   enterprise contracts. With a professorship from Czech Republic and Cambridge University post-doctoral research, Dan built
-   PKI, DNS and encryption systems for Sky, TSB Bank, Deutsche Bank, or Barclays. Combining startup agility with enterprise experience, 
-   he delivers infrastructure intelligence that makes real difference."
+  bio    : "I am a left-handed contrarian living by JFDI. I delivered secret and certificate services, 
+  DNS automation and WAF protection for Barclays, Sky UK, TSB Bank, Deutsche Bank, or Comcast. 
+  With a professorship from Czech Republic and Cambridge University post-doctoral research, 
+  I combine startup agility with enterprise experience to transform clients' operations.
+  I am always interested in talking with people about their challenges - no strings attached. 
+  dan.c@axonshield.com"
+
   links:
     - label: "$15 Million Line Item<br>That Doesn't Exist<br><small>Amazon Kindle and paperback</small>"
       image: "/assets/images/posts/15-million-line-item/book-cover-3.png"
