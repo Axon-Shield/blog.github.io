@@ -65,9 +65,9 @@ feed:
   excerpt_only: false
 
 author:
-  name   : "[Dan Cvrcek](https://linkedin.com/in/dancvrcek) [Tsvrcheck]"
+  name   : "Dan Cvrcek [Tsvrcheck]"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "I am a left-handed contrarian living by JFDI. I delivered secret and certificate services, 
+  bio    : "[I](https://linkedin.com/in/dancvrcek) am a left-handed contrarian living by JFDI. I delivered secret and certificate services, 
   DNS automation and WAF protection for Barclays, Sky UK, TSB Bank, Deutsche Bank, or Comcast. 
   With a professorship from Czech Republic and Cambridge University post-doctoral research, 
   I combine startup agility with enterprise experience to transform clients' operations.
