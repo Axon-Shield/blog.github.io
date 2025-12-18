@@ -6,7 +6,7 @@ main:
     url: https://axonshield.com/vault/
   - title: "Books"
     url: https://axonshield.com/book
-  - title: "Blog Tags"
-    url: /tags/
-  - title: "Categories"
-    url: /categories/
+  # - title: "Blog Tags"
+  #   url: /tags/
+  # - title: "Categories"
+  #   url: /categories/
