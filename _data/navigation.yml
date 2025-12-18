@@ -1,0 +1,8 @@
+# _data/navigation.yml
+main:
+  - title: "Business"
+    url: https://axonshield.com/business/
+  - title: "Technical Wiki"
+    url: https://axonshield.com/vault/
+  - title: "Books"
+    url: https://axonshield.com/book

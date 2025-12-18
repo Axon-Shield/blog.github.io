@@ -10,7 +10,4 @@ If you think finding answers is difficult for you alone, you're not wrong. It ta
 
 That's Infrastructure Intelligence. I've successfully used certificate and DNS management automation to organically build infrastructure intelligence for my clients, and here I explore how.
 
-**Led by Dan Cvrcek** - 20+ years transforming certificate, DNS, and WAF for Barclays, Sky UK, TSB Bank, Deutsche Bank, or Comcast.
-
-
-Want to talk? - [Dan Cvrcek @ LinkedIn](https://linkedin.com/in/dancvrcek)
+[Dan Cvrcek](https://linkedin.com/in/dancvrcek) - 20+ years transforming certificate, DNS, and WAF for Barclays, Sky UK, TSB Bank, Deutsche Bank, or Comcast. I am always interested in talking with people about their challenges - no strings attached. dan.c@axonshield.com
