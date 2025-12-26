@@ -1,6 +1,5 @@
 ---
-title: "Prevent v Detect: It is All About Effort
-- I Mean AI"
+title: "Prevent v Detect: It is All About Effort - I Mean AI"
 date: 2025-02-01T05:00:00-04:00
 categories:
 - cybersecurity
@@ -12,6 +11,7 @@ tags:
 - artificial-intelligence
 - security-strategy
 - automation
+summary: "Detection versus prevention in cybersecurity raises fundamental questions about enterprise certificate management automation: should we assume coworkers just want jobs done, or make cybersecurity difficult? The use case focuses on certificate lifecycle management (CLM) automation. Modern cybersecurity shifted from prevention-first to detection-focused approaches, acknowledging determined attackers eventually breach defenses. This shift doesn't mean abandoning prevention—rather, accepting that detection, response, and recovery matter equally. However, this created an industry narrative minimizing prevention importance. In certificate management, prevention through automation dramatically reduces risks compared to detection-only approaches. Manual certificate processes involve multiple error opportunities: forgotten renewals, misconfigured installations, inadequate testing, incomplete documentation, and human oversight failures. Automated CLM systems prevent these issues by ensuring timely renewals, standardizing installation procedures, performing automated validation testing, maintaining comprehensive audit trails, and eliminating human error from routine operations. The prevention-through-automation approach doesn't ignore detection—automated systems typically include robust monitoring and alerting—but prevents most issues from occurring. The effort calculus differs significantly: prevention through automation requires upfront investment while detection-focused approaches require continuous monitoring, alert triage, incident response, and damage control. Prevention through automation proves more cost-effective long-term, reducing operational burden while improving security posture. The key insight: make the secure path the easy path. When automation makes correct certificate management easier than manual processes, security improves naturally without requiring employees to overcome friction."
 ---
 ![Prevent Detect Ai](/assets/images/posts/prevent-detect/prevent-detect-ai.jpg)
 *Detection v prevention - agility v prohibition*
