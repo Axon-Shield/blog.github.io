@@ -60,6 +60,16 @@
 </script>
 {% elsif page.layout == "single" and page.categories %}
 <!-- Blog Post: BlogPosting + BreadcrumbList -->
+{% assign article_image = site.url | append: site.logo %}
+{% if page.header.image %}
+  {% assign article_image = site.url | append: page.header.image %}
+{% elsif page.header.teaser %}
+  {% assign article_image = site.url | append: page.header.teaser %}
+{% endif %}
+{% assign date_modified = page.date | date_to_xmlschema %}
+{% if page.last_modified_at %}
+  {% assign date_modified = page.last_modified_at | date_to_xmlschema %}
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -70,7 +80,7 @@
       "headline": "{{ page.title | escape }}",
       "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}",
       "datePublished": "{{ page.date | date_to_xmlschema }}",
-      "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif }}",
+      "dateModified": "{{ date_modified }}",
       "author": {
         "@type": "Person",
         "@id": "{{ site.url }}{{ site.baseurl }}/#author",
@@ -88,7 +98,7 @@
       },
       "image": {
         "@type": "ImageObject",
-        "url": "{% if page.header.image %}{{ site.url }}{{ page.header.image }}{% elsif page.header.teaser %}{{ site.url }}{{ page.header.teaser }}{% else %}{{ site.url }}{{ site.logo }}{% endif %}"
+        "url": "{{ article_image }}"
       },
       "url": "{{ site.url }}{{ site.baseurl }}{{ page.url }}",
       "mainEntityOfPage": {
@@ -128,13 +138,17 @@
 </script>
 
 <!-- Extended Article Summary Schema -->
+{% assign article_abstract = page.excerpt | strip_html | strip_newlines | truncate: 200 | escape %}
+{% if page.summary %}
+  {% assign article_abstract = page.summary | escape %}
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "{{ site.url }}{{ site.baseurl }}{{ page.url }}#article-summary",
   "headline": "{{ page.title | escape }}",
-  "abstract": "{% if page.summary %}{{ page.summary | escape }}{% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 200 | escape }}{% endif %}",
+  "abstract": "{{ article_abstract }}",
   "articleBody": "{{ page.content | strip_html | strip_newlines | truncate: 200 | escape }}",
   "author": {
     "@type": "Person",
